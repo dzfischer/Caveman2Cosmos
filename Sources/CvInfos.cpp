@@ -6,6 +6,7 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+#include "CvBuildingInfo.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -83,31 +84,31 @@ const TCHAR* CvInfoBase::getButton() const
 	return m_szButton;
 }
 
-const wchar* CvInfoBase::getCivilopediaKey() const
+const wchar_t* CvInfoBase::getCivilopediaKey() const
 {
 	return m_szCivilopediaKey;
 }
 
-const wchar* CvInfoBase::getHelpKey() const
+const wchar_t* CvInfoBase::getHelpKey() const
 {
 	return m_szHelpKey;
 }
 
-const wchar* CvInfoBase::getStrategyKey() const
+const wchar_t* CvInfoBase::getStrategyKey() const
 {
 	return m_szStrategyKey;
 }
 
-//const wchar* CvInfoBase::getGenericCategoryKey() const
+//const wchar_t* CvInfoBase::getGenericCategoryKey() const
 //{
 //	return m_szGenericCategoryKey;
 //}
-const wchar* CvInfoBase::getTextKeyWide() const
+const wchar_t* CvInfoBase::getTextKeyWide() const
 {
 	return m_szTextKey;
 }
 
-const wchar* CvInfoBase::getDescription(uint uiForm) const
+const wchar_t* CvInfoBase::getDescription(uint uiForm) const
 {
 	while(m_aCachedDescriptions.size() <= uiForm)
 	{
@@ -119,7 +120,7 @@ const wchar* CvInfoBase::getDescription(uint uiForm) const
 	return m_aCachedDescriptions[uiForm];
 }
 
-const wchar* CvInfoBase::getText() const
+const wchar_t* CvInfoBase::getText() const
 {
 	// used instead of getDescription for Info entries that are not objects
 	// so they do not have gender/plurality/forms defined in the Translator system
@@ -131,7 +132,7 @@ const wchar* CvInfoBase::getText() const
 	return m_szCachedText;
 }
 
-const wchar* CvInfoBase::getCivilopedia() const
+const wchar_t* CvInfoBase::getCivilopedia() const
 {
 	if(m_szCachedCivilopedia.empty())
 	{
@@ -141,7 +142,7 @@ const wchar* CvInfoBase::getCivilopedia() const
 	return m_szCachedCivilopedia;
 }
 
-const wchar*  CvInfoBase::getHelp() const
+const wchar_t*  CvInfoBase::getHelp() const
 {
 	if (m_szCachedHelp.empty())
 	{
@@ -151,7 +152,7 @@ const wchar*  CvInfoBase::getHelp() const
 	return m_szCachedHelp;
 }
 
-const wchar* CvInfoBase::getStrategy() const
+const wchar_t* CvInfoBase::getStrategy() const
 {
 	if (m_szCachedStrategy.empty())
 	{
@@ -161,7 +162,7 @@ const wchar* CvInfoBase::getStrategy() const
 	return m_szCachedStrategy;
 }
 
-//const wchar* CvInfoBase::getGenericCategory() const
+//const wchar_t* CvInfoBase::getGenericCategory() const
 //{
 //	if (m_szCachedGenericCategory.empty())
 //	{
@@ -546,7 +547,7 @@ const TCHAR* CvHotkeyInfo::getHotKey() const
 	return m_szHotKey;
 }
 
-const WCHAR* CvHotkeyInfo::getHotKeyDescriptionKey() const
+const wchar_t* CvHotkeyInfo::getHotKeyDescriptionKey() const
 {
 	return m_szHotKeyDescriptionKey;
 }
@@ -580,7 +581,7 @@ std::wstring CvHotkeyInfo::getHotKeyDescription() const
 	return szTemptext;
 }
 
-void CvHotkeyInfo::setHotKeyDescription(const wchar* szHotKeyDescKey, const wchar* szHotKeyAltDescKey, const wchar* szHotKeyString)
+void CvHotkeyInfo::setHotKeyDescription(const wchar_t* szHotKeyDescKey, const wchar_t* szHotKeyAltDescKey, const wchar_t* szHotKeyString)
 {
 	m_szHotKeyDescriptionKey = szHotKeyDescKey;
 	m_szHotKeyAltDescriptionKey = szHotKeyAltDescKey;
@@ -3403,7 +3404,7 @@ bool CvPromotionInfo::isZoneOfControl() const
 }
 
 //TB Combat Mods Begin  TB SubCombat Mod begin
-const wchar* CvPromotionInfo::getRenamesUnitTo() const
+const wchar_t* CvPromotionInfo::getRenamesUnitTo() const
 {
 	return m_szRenamesUnitTo;
 }
@@ -8264,7 +8265,7 @@ const TCHAR* CvActionInfo::getType() const
 	return NULL;
 }
 
-const wchar* CvActionInfo::getDescription() const
+const wchar_t* CvActionInfo::getDescription() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8274,7 +8275,7 @@ const wchar* CvActionInfo::getDescription() const
 	return L"";
 }
 
-const wchar* CvActionInfo::getCivilopedia() const
+const wchar_t* CvActionInfo::getCivilopedia() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8284,7 +8285,7 @@ const wchar* CvActionInfo::getCivilopedia() const
 	return L"";
 }
 
-const wchar* CvActionInfo::getHelp() const
+const wchar_t* CvActionInfo::getHelp() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8294,7 +8295,7 @@ const wchar* CvActionInfo::getHelp() const
 	return L"";
 }
 
-const wchar* CvActionInfo::getStrategy() const
+const wchar_t* CvActionInfo::getStrategy() const
 {
 	if (getHotkeyInfo())
 	{
@@ -8304,7 +8305,7 @@ const wchar* CvActionInfo::getStrategy() const
 	return L"";
 }
 
-//const wchar* CvActionInfo::getGenericCategory() const
+//const wchar_t* CvActionInfo::getGenericCategory() const
 //{
 //	if (getHotkeyInfo())
 //	{
@@ -8324,7 +8325,7 @@ const TCHAR* CvActionInfo::getButton() const
 	return NULL;
 }
 
-const wchar* CvActionInfo::getTextKeyWide() const
+const wchar_t* CvActionInfo::getTextKeyWide() const
 {
 	if (getHotkeyInfo())
 	{
@@ -9530,12 +9531,12 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY2(m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos());
 }
 
-const wchar* CvCivicInfo::getWeLoveTheKing() const
+const wchar_t* CvCivicInfo::getWeLoveTheKing() const
 {
 	return m_szWeLoveTheKingKey;
 }
 
-const wchar* CvCivicInfo::getWeLoveTheKingKey() const
+const wchar_t* CvCivicInfo::getWeLoveTheKingKey() const
 {
 	return m_szWeLoveTheKingKey;
 }
@@ -12492,7 +12493,7 @@ bool CvCivilizationInfo::isPlayable() const
 	return m_bPlayable;
 }
 
-const wchar* CvCivilizationInfo::getShortDescription(uint uiForm)
+const wchar_t* CvCivilizationInfo::getShortDescription(uint uiForm)
 {
 	while(m_aszShortDescription.size() <= uiForm)
 	{
@@ -12502,12 +12503,12 @@ const wchar* CvCivilizationInfo::getShortDescription(uint uiForm)
 	return m_aszShortDescription[uiForm];
 }
 
-const wchar* CvCivilizationInfo::getShortDescriptionKey() const
+const wchar_t* CvCivilizationInfo::getShortDescriptionKey() const
 {
 	return m_szShortDescriptionKey;
 }
 
-const wchar* CvCivilizationInfo::getAdjective(uint uiForm)
+const wchar_t* CvCivilizationInfo::getAdjective(uint uiForm)
 {
 	while(m_aszAdjective.size() <= uiForm)
 	{
@@ -12517,7 +12518,7 @@ const wchar* CvCivilizationInfo::getAdjective(uint uiForm)
 	return m_aszAdjective[uiForm];
 }
 
-const wchar* CvCivilizationInfo::getAdjectiveKey() const
+const wchar_t* CvCivilizationInfo::getAdjectiveKey() const
 {
 	return m_szAdjectiveKey;
 }
@@ -15672,9 +15673,6 @@ void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum) const
 //					CvImprovementInfo
 //======================================================================================================
 
-ImprovementTypes CvImprovementInfo::m_ImprovementCity = NO_IMPROVEMENT;
-ImprovementTypes CvImprovementInfo::m_ImprovementRuins = NO_IMPROVEMENT;
-
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvImprovementInfo()
@@ -16489,7 +16487,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
 	pXML->GetOptionalChildXmlValByName(&m_iVisibilityChange, L"iVisibilityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iSeeFrom, L"iSeeFrom");
-	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 	pXML->GetOptionalChildXmlValByName(&m_bBombardable, L"bBombardable");
 	pXML->GetOptionalChildXmlValByName(&m_bUpgradeRequiresFortify, L"bUpgradeRequiresFortify");
 	// Super Forts end
@@ -16957,26 +16955,6 @@ void CvImprovementInfo::copyNonDefaultsReadPass2(CvImprovementInfo* pClassInfo, 
 	if (bOver || m_iBonusChange == iTextDefault) m_iBonusChange = pClassInfo->getBonusChange();
 }
 
-ImprovementTypes CvImprovementInfo::getImprovementCity()
-{
-	return m_ImprovementCity;
-}
-
-void CvImprovementInfo::setImprovementCity(ImprovementTypes eIndex)
-{
-	m_ImprovementCity = eIndex;
-}
-
-ImprovementTypes CvImprovementInfo::getImprovementRuins()
-{
-	return m_ImprovementRuins;
-}
-
-void CvImprovementInfo::setImprovementRuins(ImprovementTypes eIndex)
-{
-	m_ImprovementRuins = eIndex;
-}
-
 //======================================================================================================
 //					CvBonusClassInfo
 //======================================================================================================
@@ -17016,7 +16994,7 @@ bool CvBonusClassInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 
 	return true;
 }
@@ -17482,7 +17460,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iPercentPerPlayer, L"iPlayer");
 	pXML->GetOptionalChildXmlValByName(&m_iTilesPer, L"iTilesPer");
 	pXML->GetOptionalChildXmlValByName(&m_iMinLandPercent, L"iMinLandPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUnique");
+	pXML->GetOptionalChildXmlValByName(&m_iUniqueRange, L"iUniqueRange");
 	pXML->GetOptionalChildXmlValByName(&m_iGroupRange, L"iGroupRange");
 	pXML->GetOptionalChildXmlValByName(&m_iGroupRand, L"iGroupRand");
 	pXML->GetOptionalChildXmlValByName(&m_bOneArea, L"bArea");
@@ -18434,7 +18412,6 @@ CvYieldInfo::CvYieldInfo() :
 m_iChar(0),
 m_iHillsChange(0),
 m_iPeakChange(0),
-m_iLakeChange(0),
 m_iCityChange(0),
 m_iPopulationChangeOffset(0),
 m_iPopulationChangeDivisor(0),
@@ -18479,11 +18456,6 @@ int CvYieldInfo::getHillsChange() const
 int CvYieldInfo::getPeakChange() const
 {
 	return m_iPeakChange;
-}
-
-int CvYieldInfo::getLakeChange() const
-{
-	return m_iLakeChange;
 }
 
 int CvYieldInfo::getCityChange() const
@@ -18553,7 +18525,6 @@ bool CvYieldInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_iHillsChange, L"iHillsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPeakChange, L"iPeakChange");
-	pXML->GetOptionalChildXmlValByName(&m_iLakeChange, L"iLakeChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCityChange, L"iCityChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeOffset, L"iPopulationChangeOffset");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChangeDivisor, L"iPopulationChangeDivisor");
@@ -18619,7 +18590,6 @@ void CvYieldInfo::copyNonDefaults(CvYieldInfo* pClassInfo, CvXMLLoadUtility* pXM
 
 	if (getHillsChange() == iDefault) m_iHillsChange = pClassInfo->getHillsChange();
 	if (getPeakChange() == iDefault) m_iPeakChange = pClassInfo->getPeakChange();
-	if (getLakeChange() == iDefault) m_iLakeChange = pClassInfo->getLakeChange();
 	if (getCityChange() == iDefault) m_iCityChange = pClassInfo->getCityChange();
 	if (getPopulationChangeOffset() == iDefault) m_iPopulationChangeOffset = pClassInfo->getPopulationChangeOffset();
 	if (getPopulationChangeDivisor() == iDefault) m_iPopulationChangeDivisor = pClassInfo->getPopulationChangeDivisor();
@@ -18643,7 +18613,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 {
 	CheckSum(iSum, m_iHillsChange);
 	CheckSum(iSum, m_iPeakChange);
-	CheckSum(iSum, m_iLakeChange);
 	CheckSum(iSum, m_iCityChange);
 	CheckSum(iSum, m_iPopulationChangeOffset);
 	CheckSum(iSum, m_iPopulationChangeDivisor);
@@ -18658,9 +18627,6 @@ void CvYieldInfo::getCheckSum(unsigned int& iSum) const
 //					CvTerrainInfo
 //======================================================================================================
 
-TerrainTypes CvTerrainInfo::m_TerrainPeak = NO_TERRAIN;
-TerrainTypes CvTerrainInfo::m_TerrainHill = NO_TERRAIN;
-
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvTerrainInfo()
@@ -18670,8 +18636,6 @@ TerrainTypes CvTerrainInfo::m_TerrainHill = NO_TERRAIN;
 //------------------------------------------------------------------------------------------------------
 CvTerrainInfo::CvTerrainInfo() :
 m_iMovementCost(0),
-m_iSeeFromLevel(0),
-m_iSeeThroughLevel(0),
 m_iBuildModifier(0),
 m_iDefenseModifier(0),
 m_bWaterTerrain(false),
@@ -18679,6 +18643,7 @@ m_bImpassable(false),
 m_bFound(false),
 m_bFoundCoast(false),
 m_bFoundFreshWater(false),
+m_bFreshWaterTerrain(false),
 m_iWorldSoundscapeScriptId(0),
 m_piYields(NULL),
 m_piRiverYieldChange(NULL),
@@ -18715,16 +18680,6 @@ int CvTerrainInfo::getMovementCost() const
 	return m_iMovementCost;
 }
 
-int CvTerrainInfo::getSeeFromLevel() const
-{
-	return m_iSeeFromLevel;
-}
-
-int CvTerrainInfo::getSeeThroughLevel() const
-{
-	return m_iSeeThroughLevel;
-}
-
 int CvTerrainInfo::getBuildModifier() const
 {
 	return m_iBuildModifier;
@@ -18758,6 +18713,11 @@ bool CvTerrainInfo::isFoundCoast() const
 bool CvTerrainInfo::isFoundFreshWater() const
 {
 	return m_bFoundFreshWater;
+}
+
+bool CvTerrainInfo::isFreshWaterTerrain() const
+{
+	return m_bFreshWaterTerrain;
 }
 
 const TCHAR* CvTerrainInfo::getArtDefineTag() const
@@ -18894,10 +18854,9 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFound, L"bFound");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundCoast, L"bFoundCoast");
 	pXML->GetOptionalChildXmlValByName(&m_bFoundFreshWater, L"bFoundFreshWater");
+	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterTerrain, L"bFreshWaterTerrain");
 
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
-	pXML->GetOptionalChildXmlValByName(&m_iSeeFromLevel, L"iSeeFrom");
-	pXML->GetOptionalChildXmlValByName(&m_iSeeThroughLevel, L"iSeeThrough");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildModifier, L"iBuildModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iDefenseModifier, L"iDefense");
 
@@ -19006,9 +18965,8 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 	if (isFound() == bDefault) m_bFound = pClassInfo->isFound();
 	if (isFoundCoast() == bDefault) m_bFoundCoast = pClassInfo->isFoundCoast();
 	if (isFoundFreshWater() == bDefault) m_bFoundFreshWater = pClassInfo->isFoundFreshWater();
+	if (isFreshWaterTerrain() == bDefault) m_bFreshWaterTerrain = pClassInfo->isFreshWaterTerrain();
 	if (getMovementCost() == iDefault) m_iMovementCost = pClassInfo->getMovementCost();
-	if (getSeeFromLevel() == iDefault) m_iSeeFromLevel = pClassInfo->getSeeFromLevel();
-	if (getSeeThroughLevel() == iDefault) m_iSeeThroughLevel = pClassInfo->getSeeThroughLevel();
 	if (getBuildModifier() == iDefault) m_iBuildModifier = pClassInfo->getBuildModifier();
 	if (getDefenseModifier() == iDefault) m_iDefenseModifier = pClassInfo->getDefenseModifier();
 
@@ -19048,8 +19006,6 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 {
 	CheckSum(iSum, m_iMovementCost);
-	CheckSum(iSum, m_iSeeFromLevel);
-	CheckSum(iSum, m_iSeeThroughLevel);
 	CheckSum(iSum, m_iBuildModifier);
 	CheckSum(iSum, m_iDefenseModifier);
 
@@ -19058,6 +19014,7 @@ void CvTerrainInfo::getCheckSum(unsigned int &iSum) const
 	CheckSum(iSum, m_bFound);
 	CheckSum(iSum, m_bFoundCoast);
 	CheckSum(iSum, m_bFoundFreshWater);
+	CheckSum(iSum, m_bFreshWaterTerrain);
 
 	// Arrays
 
@@ -20775,6 +20732,7 @@ CvWorldInfo::CvWorldInfo() :
 ,m_iNumCitiesAnarchyPercent(0)
 ,m_iAdvancedStartPointsMod(0)
 ,m_iCommandersLevelThresholdsPercent(0)
+,m_iOceanMinAreaSize(0)
 ,m_Percent()
 { }
 
@@ -20889,6 +20847,11 @@ int CvWorldInfo::getCommandersLevelThresholdsPercent() const
 	return m_iCommandersLevelThresholdsPercent;
 }
 
+int CvWorldInfo::getOceanMinAreaSize() const
+{
+	return m_iOceanMinAreaSize;
+}
+
 int CvWorldInfo::getPercent(int iID) const
 {
 	return m_Percent.getValue(iID);
@@ -20923,6 +20886,7 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesAnarchyPercent, L"iNumCitiesAnarchyPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartPointsMod, L"iAdvancedStartPointsMod");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandersLevelThresholdsPercent, L"iCommandersLevelThresholdsPercent");
+	pXML->GetOptionalChildXmlValByName(&m_iOceanMinAreaSize, L"iOceanMinAreaSize");
 
 	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
 	{
@@ -20965,6 +20929,7 @@ void CvWorldInfo::copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getNumCitiesAnarchyPercent() == iDefault) m_iNumCitiesAnarchyPercent = pClassInfo->getNumCitiesAnarchyPercent();
 	if (getAdvancedStartPointsMod() == iDefault) m_iAdvancedStartPointsMod = pClassInfo->getAdvancedStartPointsMod();
 	if (getCommandersLevelThresholdsPercent() == iDefault) m_iCommandersLevelThresholdsPercent = pClassInfo->getCommandersLevelThresholdsPercent();
+	if (m_iOceanMinAreaSize == iDefault) m_iOceanMinAreaSize = pClassInfo->getOceanMinAreaSize();
 
 	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
 }
@@ -20990,8 +20955,8 @@ void CvWorldInfo::getCheckSum(unsigned int& iSum) const
 	CheckSum(iSum, m_iCorporationMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesAnarchyPercent);
 	CheckSum(iSum, m_iAdvancedStartPointsMod);
-
 	CheckSum(iSum, m_iCommandersLevelThresholdsPercent);
+	CheckSum(iSum, m_iOceanMinAreaSize);
 
 	m_Percent.getCheckSum(iSum);
 }
@@ -22466,7 +22431,7 @@ void CvReligionInfo::setAdjectiveKey(const TCHAR* szVal)
 	m_szAdjectiveKey = szVal;
 }
 
-const wchar* CvReligionInfo::getAdjectiveKey() const
+const wchar_t* CvReligionInfo::getAdjectiveKey() const
 {
 	return m_szAdjectiveKey;
 }
@@ -31634,11 +31599,6 @@ void CvEraInfo::getCheckSum(unsigned int& iSum) const
 //					CvColorInfo
 //======================================================================================================
 
-ColorTypes CvColorInfo::m_eGreen = NO_COLOR;
-ColorTypes CvColorInfo::m_eRed = NO_COLOR;
-ColorTypes CvColorInfo::m_eYellow = NO_COLOR;
-ColorTypes CvColorInfo::m_eWhite = NO_COLOR;
-
 //------------------------------------------------------------------------------------------------------
 //
 //  FUNCTION:   CvColorInfo()
@@ -32076,12 +32036,12 @@ CvGameText::CvGameText() :
 {
 }
 
-const wchar* CvGameText::getText() const
+const wchar_t* CvGameText::getText() const
 {
 	return m_szText;
 }
 
-void CvGameText::setText(const wchar* szText)
+void CvGameText::setText(const wchar_t* szText)
 {
 	m_szText = szText;
 }
@@ -35046,22 +35006,22 @@ const char* CvEventInfo::getPythonHelp() const
 	return m_szPythonHelp;
 }
 
-const wchar* CvEventInfo::getUnitNameKey() const
+const wchar_t* CvEventInfo::getUnitNameKey() const
 {
 	return m_szUnitName;
 }
 
-const wchar* CvEventInfo::getQuestFailTextKey() const
+const wchar_t* CvEventInfo::getQuestFailTextKey() const
 {
 	return m_szQuestFailText;
 }
 
-const wchar* CvEventInfo::getLocalInfoTextKey() const
+const wchar_t* CvEventInfo::getLocalInfoTextKey() const
 {
 	return m_szLocalInfoText;
 }
 
-const wchar* CvEventInfo::getOtherPlayerPopup() const
+const wchar_t* CvEventInfo::getOtherPlayerPopup() const
 {
 	return m_szOtherPlayerPopup;
 }
@@ -38617,8 +38577,6 @@ void CvPromotionLineInfo::setBuildings()
 //  DESC:   Contains unit combat types
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-UnitCombatTypes CvUnitCombatInfo::m_UnitCombatAnimal = NO_UNITCOMBAT;
-UnitCombatTypes CvUnitCombatInfo::m_UnitCombatWildAnimal = NO_UNITCOMBAT;
 
 CvUnitCombatInfo::CvUnitCombatInfo() 
 	//Textual References
