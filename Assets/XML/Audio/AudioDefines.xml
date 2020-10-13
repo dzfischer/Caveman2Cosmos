@@ -14793,6 +14793,1539 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
+			<SoundID>SONG_NATURE_PLAYER</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Nature player</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PRIMITIVE_SOUNDS</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Primitive sounds</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DREAMTIME</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/03 Dream Time</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANCMEFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Prehistoric</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FIRECAVERNRITUAL</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Fire cavern ritual</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DESERTSTRINGWIND</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Desert string wind</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PRIMORDIALPLAYER</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Primordial players</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PRIMITIVERITUALES</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Primitive rituales</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_COMMUNITYLIFE</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Community Life</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_AFRICANDAYBREAK</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/African Daybreak</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_STONEAGE_EXPRESSIONS</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Stone Age Expressions</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_STONEAGE_HUNTER</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Paleowolf - Primordial - 01 Hunter</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GLOBAL_MIGRATIONS</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Paleowolf - Primordial - 02 Global Migrations</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PALEOFOREST</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Paleowolf - Primordial - 03 Paleoforest</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANCGRFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/AncGRfull</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_RA</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Ra</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANCIENT_EGYPTIAN_MUSIC_NENCHEFKA'S_ORCHESTRA</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/DesertTemple</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_THE_TREASURES_OF_RA</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/The Treasures of Ra</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MYSTICAL_PYRAMID_2</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Mystical Pyramids</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+        <SoundData>
+			<SoundID>SONG_THE_MYSTIC_PYRAMID</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Gauntlet Dark Legacy The Mystic Pyramid</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_IN_QUEST_OF_THE_PLAGUE</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/In Quest of the Plague</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_THE_SCRIBES_OF_KUR</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/The Scribes Of Kur</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_AWAITING_THE_VULTURES</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Awaiting the Vultures</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CURSE_THE_SUN</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Curse the Sun</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SLAVERY_UNTO_NITOKRIS</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Slavery Unto Nitokris</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NIGHTOFSUMERIA</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/The Night of Sumeria</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MESOPATAMIA</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Mesopotamia</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MECHAIN</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Me Chain</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TEMPLE_OF_THE_PRIEST</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Temple of the Priest</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MISPI</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Mis Pi</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_KARNAK</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Karnak</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SWORDOFISLAMANCIENT3</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/SwordofIslamAncient3</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CRADLE_OF_CIVILIZATION</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Cradle Of Civilization</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EASTERNELEGY</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Eastern Elegy by Philip Guyler</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SONG_OF_THE_PHAROAHS</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Song of the Pharaohs</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_IZDIHAR</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/The Ancient Halls of Izdihar</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NENCHEFKAS_ORCHESTRA</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/Nenchefkas Orchestra</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANCIENT_MYSTERY</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Ancient Mystery</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>  
+		<SoundData>
+			<SoundID>SONG_ANCIENT_BABYLON</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Ancient Babylon</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData> 
+		<SoundData>
+			<SoundID>SONG_THEPROPHECY</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Prophecy</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SONG_ROMEFORUM</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/RomeForum</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANCIENTGREEKSONG</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/AncientGreece</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_WINDSOFITHACA</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Antti Martikainen Winds of Ithaca</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ROADTODAMASCUS</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/The Road To Damascus</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GATESOFBABYLON</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Antti Martikainen At the Gates of Babylon</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_WINGSOFGABRIEL</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Wings Of Gabriel</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FORGOTTEN_PATH</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/The Forgotten Path</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_POMPEI</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Pompei</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BIRTHOFANISLAND</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Birth of an Island</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANCIENTROMANFOUR</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Ancient Roman Music Song 4</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EASTERNWINDS</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Eastern Winds</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MYSTICSDREAM</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/The Mystic's Dream</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TEMPLE_OF_ISIS</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/The Temple of Isis</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CANTIGAENTRE</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Der unghelarte hat ghemachet eyne senende wise</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CANTIGAQUEN</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Cantiga Quen serve Santa Maria</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BELICHA</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Belicha</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FEHU</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Dragon's Crown (Website Theme)</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ANSUR</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Elven Flute (Medieval Music)</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CRYOFTHECELTS</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Cry of the Celts (Full version)</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CELTICCHANT</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/CelticChant</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_HEROSJOURNEY</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Hero's Journey</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FALLA</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Falla choir piece of the Balkans</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GLORY_OF_BYZANTIUM</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Greek Orthodox Glory of Byzantium Choir of Greece</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ORTHODOX_RUSSIAN_CHANT</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Very beautiful orthodox russian voices</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ILRITORNO</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Antti Martikainen The God of Thunder</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_THEBYZANTINEEMPIRE</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/The Byzantine Empire</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CARMINA</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Carmina Burana Carmina Burana Bache bene venies</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CARMINA_TWO</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Carmina Burana Tempus est iocundum</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SCARBOROUGH_FAIR</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Scarborough Fair Instrumental</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GREENSLEEVES</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Greensleeves Flute and Harp</Filename>                        
+            <LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+        <SoundData>
+			<SoundID>SONG_CANSOS_DE_TROBAIRITZ</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Cansos de Trobairitz Vos que m semblatz</Filename>                        
+            <LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_VETUSABIT</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Vetus abit littera</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_IN_SPIRITUS</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Danny Rayel In Spiritus</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_RHIANNON</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Medeival Marketplace</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MIDECFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/MidECFull</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_JACKOLENT</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Maiden Lane Jack O Lent Chestnut Bonny Broom</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SOPHIA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Sophia No13 Anna No4</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PIRATESTAVERN</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Pirates Of The Caribbean Tavern</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FEDERALOVERTURE</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Federal Overture</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GIOVANNI_VALENTINI_SONATA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Giovanni Valentini Sonata A5 Forgotten early baroque music</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PAVAN</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/01 01 I. Pavan</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_LACCORTA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/01 01 L'Accorta</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ENGLISHDANCINGMASTER</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/01 01 The English Dancing Master_ Scotch Cap</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FESTIVE_SOUNDS</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/1. Festive Sounds</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_IRISH_SEASONG</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/12. Irish Seaman Song for Renaissance Guitar</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_KRUNK</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Krunk</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SONATA_JOHANN_HEINRICH_SCHMELZER</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Johann Heinrich Schmelzer Sonata Prima</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MISSA_BRUXELLENSIS_SANCTUS</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Heinrich Ignaz Franz von Biber Sanctus</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SONATA_QUARTA_SCHMELZER</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Schmelzer Sonata Quarta</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TORTUGA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Antti Martikainen Destination Tortuga</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TOCCATA_SECONDA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Toccata seconda del I tono</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_LACATHERINE</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/La Catherine</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CARRIEDAWAYACROSSTHESEA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Carried Away Across the Sea</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CALATA_ALA_SPAGNOLA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Calata ala spagnola</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EMBRACE_EVERYTHING</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Embrace Everything</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EARLY_BAROQUE</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/EarlyBaroque</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EARLY_BAROQUE_TWO</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/EarlyBaroque2</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GIOVANNI_VALENTINI_SONATA</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Giovanni Valentini Sonata A5 Forgotten early baroque music</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BELL_ROCK</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Legend of Bell Rock</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MONTEVERDI</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Monteverdi L Orfeo Savall</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GREGORIAN_MANDOLIN</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Gregorian Mandolin</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FLUTE_OF_THE_RENAISSANCE</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/The Flute of Renaissance</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_JUGGLERS_JIG</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/The Medieval Jugglers Jig</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DIESIRAE</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Dies Irae</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ODETOJOY</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Ode to Joy</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PACHELBEL_CANON</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Johann Pachelbel Canon in D Major</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_OLD_MAUI</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Rolling down to old Maui</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SONG_FOR_SIENNA</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Song for Sienna</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EDGE_OF_A_PETAL</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/The Edge of a Petal</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_VIVALDI_GLORIA_DEO</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Vivaldi Gloria in excelsis Deo</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_HANDEL_FLUTE_SONATA</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Handel Flute Sonata</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MOZART_FANTASIA</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Fantasia in F Minor</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BACHFUGUEGMINOR</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Bach Fugue in G minor</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_COLDNOBILITY</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/ColdNobilityandNoblesseOblige</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EASTERNVIOLIN</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Beautiful Violin Music</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TIMEFORGOTTEN</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Time Forgotten</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_VIVALDI_SPRING</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Vivaldi Four Seasons Spring</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PATRIOT_REPRISE</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/The Patriot Reprise</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CHOPIN_NOCTURNE</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Chopin Nocturne op.9 No.2</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BEETHOVEN_ALLEGRETTO_7</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Beethoven - Allegretto from Symphony No. 7</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BEETHOVEN_ALLEGRO_CON_BRIO</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Beethoven Symphony No. 5 I. Allegro con brio</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ALEXANDERRAGTIME</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Alexanders Ragtime Band</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_STRAVINSKY_FIREBIRD</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Stravinsky Firebird</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BATTLEFRONTIER</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Battle Frontier</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FANFAREFORTHECOMMONMAN</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Fanfare For The Common Man</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_INTHESHADOWS</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/In The Shadows</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MYSTERIOUSCHOCOLATE</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Mysterious Chocolate</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SHOSTAKOVICH_WALTZ_TWO</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Shostakovich Waltz 2</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_RAGGINTHEWAVES</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Raggin The Waves</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SYMPHONYTEN</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Symphony No 10</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TALLYHO</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/TALLY HO</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TESTFLIGHTDELIGHT</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Test Flight Delight</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ENTERTAINER</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/The Entertainer</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_RIDEOFTHEVALKERIES</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/RideoftheValkeries</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_VITALFORCE</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Vital Force</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DANCE_MACABRE</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Camille Saint-Saens - Danse Macabre</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MOUNTAIN_KING</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Edvard Grieg Op.46 In The Hall Of Mountain King</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BOLERO_RAVEL</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Bolero Ravel</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FAUST_MEPHISTOPHELES_RONDO</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Faust Act II Mephistopheles Rondo</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_STONE_GUARDIANS</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Stone Guardians Midnight Syndicate</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MELODY_OF_WATER</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Tales of Zestiria Melody of Water</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DANCING_MAD</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Final Fantasy Six Dancing Mad Orchestrated</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CARNIVAL_OF_THE_ANIMALS_AQUARIUM</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Carnival of the Animals Aquarium</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FIREONHIGH</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/FireOnHigh</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SACRED_GROUND</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Sacred Ground by Craig Chaquico</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TURQUOISE_MOON</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Turquoise Moon - Craig Chaquico</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MOJAVE</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Mojave</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_THOSEWHOFIGHTFURTHER</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Those Who Fight Further</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ONE_DAY</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/One Day</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DYSTOPIAN_OVERTURE</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Nomacs and Dystopian Overture</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_JUMP</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Jump</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DIOMEDE</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Diomede</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_IMMORTALLEGACY</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/ImmortalLegacy</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ARES</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Ares</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_THEAMULET</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/The Amulet by Peter Thomas Sound Orchester</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BEYOND_THE_SUNSET</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Beyond the Sunset</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_VITRIOLICASTROKE</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Tomorrow Will Surely Be Sunny</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ESRISEOFACHAMPION</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Empire Syndicate Rise Of A Champion</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BLOODOFANEWWORLD</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Empire Syndicate Blood Of A New World</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_APHELION</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Aphelion</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ETERNAL_LIGHT</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Eternal Light</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ICARUS</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Icarus Feat Julie Elven</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SOARING_DRAGONS</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/A Tale Of Soaring Dragons</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DRAGONLAND</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/Dragonland</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FUTURETECHNOBEAT</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Futuristic Techno Beat</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_HELLOWORLD</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Hello World</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ELECTRICPEOPLE</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Electric People</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BROKENPHANTASM</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Broken Phantasm</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MODERNFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Future/ModernFull</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NIGHTENGALEFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Future/NightengaleFull</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MULHOLLAND</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Mulholland Drive</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ENDLESS_WONDER</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Endless Wonder</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SHOOTING_IT_OUT</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Sword Art Online OST Shooting it Out</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_STARSFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Future/StarsFull</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FROZENMOMENT</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Frozen Moment</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BROWNIAN_MOTION</SoundID>
+			<Filename>Sounds/Soundtrack/Future/01 02 Brownian Motion</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PROFONDEURS</SoundID>
+			<Filename>Sounds/Soundtrack/Future/2. L_ivresse des Profondeurs</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_BOUNDS_OF_THE_UNIVERSE</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Bounds of the Universe</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SOAR_AND_GLIDE</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Soar and Glide</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_UNKNOWN_ARTES</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Artes not Yet Known</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SANCTUM</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Sanctum</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SANCTUARY</SoundID>
+			<Filename>Sounds/Soundtrack/Future/Sanctuary Fortress</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>  
+		<SoundData>
+			<SoundID>SONG_GRADIUSFIVE</SoundID>
+			<Filename>Sounds/Soundtrack/Future/GradiusFive</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SOLAR_ECHOS</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/01 01 Solar Echoes</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FAR_CENTAURUS</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/01 09 Far Centaurus</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_RED_GIANT</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Red Giant</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ETERNITY</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/3. Eternity</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_MESSIER_45</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/10. Messier 45</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DECIMATOR</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen Enter Infinity 11 Decimator</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_XENOSPHERES</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 01 Xenospheres</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ELYSION</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 02 Elysion</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DEEP_SPACE_EXPEDITION</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 03 Deep Space Expedition</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DYSTOPIA</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 04 Dystopia</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_UNEXPLORED_TERRITORIES</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 05 Unexplored Territories</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DISRUPTION</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 06 Disruption</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_TERRAFORMING</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 07 Terraforming</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ENDLESS_FRONTIER</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 08 Endless Frontier</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_STAR_ODYSSEY</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 09 Star Odyssey</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SKY_ATLAS</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 10 Sky Atlas</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ENTER_INFINITY</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Antti Martikainen - Enter Infinity - 12 Enter Infinity</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NOVUS_MAGNIFICAT_EXULTATE</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Novus Magnificat Exultate</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NOVUS_ONE</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Novus Magnificat Soul's Journey</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NOVUS_TWO</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Novus Magnificat  Ascent</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_NOVUS_THREE</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/Novus Magnificat Tears of Terra</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_PLUTO_BRINGER_OF_CHANGE</SoundID>
+			<Filename>Sounds/Soundtrack/Galactic/PLUTO Bringer Of Change</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_EIGHTEENTWELVEFINALE</SoundID>
+			<Filename>Sounds/Soundtrack/Industrial/Finale From 1812</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+        <SoundData>
+			<SoundID>SONG_ANCORFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/AncORFull</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CIVIIIANCMIDEAST</SoundID>
+			<Filename>Sounds/Soundtrack/Ancient/CivIIIAncMidEast</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_WARDRUNAONE</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/AnsuR by Wardruna</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_WARDRUNATWO</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Fehu by Wardruna</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_GREGMANDO</SoundID>
+			<Filename>Sounds/Soundtrack/Medieval/Gregorian Mandolin</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_FISHERSHORNPIPE</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/Fishers Hornpipe</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_LALUXILLIER</SoundID>
+			<Filename>Sounds/Soundtrack/Renaissance/La Luxillier La Balanje</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_DECISIVEBATTLE</SoundID>
+			<Filename>Sounds/Soundtrack/Modern/The Decisive Battle</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>		
+		<SoundData>
+			<SoundID>SONG_BATTLEOFBABYLON</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Battle of Babylon</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_JOURNEYTOROME</SoundID>
+			<Filename>Sounds/Soundtrack/Classical/Journey to Rome</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_ADAGIOALLEGRO</SoundID>
+			<Filename>Sounds/Soundtrack/Enlightenment/Adagio Allegro</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_SMASHFULL</SoundID>
+			<Filename>Sounds/Soundtrack/Future/SmashFull </Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>
+		<SoundData>
+			<SoundID>SONG_CAVEANCIENTMUSIC</SoundID>
+			<Filename>Sounds/Soundtrack/Prehistoric/Cave ancient music</Filename>
+			<LoadType>STREAMED</LoadType>
+			<bIsCompressed>1</bIsCompressed>
+			<bInGeneric>1</bInGeneric>
+		</SoundData>		
+		<SoundData>
 			<SoundID>SND_TECH_MICROLITH</SoundID>
 			<Filename>Sounds/Tech/Microlith</Filename>
 			<LoadType>STREAMED</LoadType>
