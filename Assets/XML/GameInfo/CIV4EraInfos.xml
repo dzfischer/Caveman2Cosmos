@@ -27,11 +27,26 @@ Good luck! -->
 			<iGreatPeoplePercent>400</iGreatPeoplePercent>
 			<iAnarchyPercent>40</iAnarchyPercent>
 			<iEventChancePerTurn>7</iEventChancePerTurn>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
-				<EraInfoSoundtrack>AS2D_DOODLEGOD</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NATURE_PLAYER</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_MESOAMERICAN1</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_MESOAMERICAN2</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_PRIMITIVE_SOUNDS</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_PRIMEVALWORLDJURASSICJUNGLE</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_DREAMTIME</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_ANCMEFULL</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_FIRECAVERNRITUAL</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_DESERTSTRINGWIND</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_PRIMORDIALPLAYER</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_PRIMITIVERITUALES</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_COMMUNITYLIFE</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_AFRICANDAYBREAK</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_STONEAGE_EXPRESSIONS</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_STONEAGE_HUNTER</EraInfoSoundtrack>                               
+                <EraInfoSoundtrack>AS2D_GLOBAL_MIGRATIONS</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_PALEOFOREST</EraInfoSoundtrack>
+                <EraInfoSoundtrack>AS2D_DOODLEGOD</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_DOODLEGODTWO</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_PRIMEVALWORLDJURASSICJUNGLE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_THEPREHISTORYCHANNEL</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ANCIENT_SOUNDTRACK_1</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ANCIENT_SOUNDTRACK_2</EraInfoSoundtrack>
@@ -40,6 +55,7 @@ Good luck! -->
 				<EraInfoSoundtrack>AS2D_HORIZON</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_COYOTE_MOON</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_TURQUOISE_RAIN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CAVEANCIENTMUSIC</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -79,34 +95,36 @@ Good luck! -->
 			<iGreatPeoplePercent>300</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>7</iEventChancePerTurn>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_AMBIENTWINDS</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_MID_EAST</EraInfoSoundtrack>
- 				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_EARLY_PEACE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_EARLY_WAR</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_LATE_PEACE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_AS_LATE_WAR</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_ME_EARLY_PEACE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_ME_EARLY_WAR</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_ME_LATE_PEACE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_ME_LATE_WAR</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_NA_EARLY_PEACE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_NA_EARLY_WAR</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_NA_LATE_PEACE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_DIP_NA_LATE_WAR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCGRFULL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_RA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCIENT_EGYPTIAN_MUSIC_NENCHEFKA'S_ORCHESTRA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_THE_TREASURES_OF_RA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MYSTICAL_PYRAMID_2</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_THE_MYSTIC_PYRAMID</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_IN_QUEST_OF_THE_PLAGUE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_THE_SCRIBES_OF_KUR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_AWAITING_THE_VULTURES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CURSE_THE_SUN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SLAVERY_UNTO_NITOKRIS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NIGHTOFSUMERIA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MESOPATAMIA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MECHAIN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TEMPLE_OF_THE_PRIEST</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MISPI</EraInfoSoundtrack> 
+				<EraInfoSoundtrack>AS2D_KARNAK</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SWORDOFISLAMANCIENT3</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CRADLE_OF_CIVILIZATION</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EASTERNELEGY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_OF_THE_PHAROAHS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_IZDIHAR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NENCHEFKAS_ORCHESTRA</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_HAMMURABISCODE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_HARVESTOFTHENILE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_HYMNFORTHESUNRISE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MESOAMERICAN1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MESOAMERICAN2</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_TENOCHTITLANREVEALED</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_MID_ORIENTAL</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_AMERICA</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_ROME</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MOD_ASIAN</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MOD_CELTIC</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MOD_MID_EAST</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCORFULL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CIVIIIANCMIDEAST</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -148,25 +166,39 @@ Good luck! -->
 			<iGreatPeoplePercent>225</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>8</iEventChancePerTurn>
-			<iSoundtrackSpace>400</iSoundtrackSpace>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_ARISTOTLESPUPIL</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_AUGUSTUSRISES</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MID_AFRICA</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MID_AMERICAN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCIENT_MYSTERY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCIENT_BABYLON</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_THEPROPHECY</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_GAUTAMAPONDERS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SHININGPATH</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_UN</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_ALEXANDER</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_ROME</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_ROMEFORUM</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_PELOPONNESIAN</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MID_ROME</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_ANC_EUROPE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_ROMAN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCIENTGREEKSONG</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_WINDSOFITHACA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ROADTODAMASCUS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GATESOFBABYLON</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_WINGSOFGABRIEL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FORGOTTEN_PATH</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_POMPEI</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BIRTHOFANISLAND</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANCIENTROMANFOUR</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_FANTASY1</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_FANTASY2</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_BARBARIAN</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_OMENS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EASTERNWINDS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MYSTICSDREAM</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TEMPLE_OF_ISIS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_WARDRUNAONE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_WARDRUNATWO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BATTLEOFBABYLON</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_JOURNEYTOROME</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -208,7 +240,6 @@ Good luck! -->
 			<iGreatPeoplePercent>150</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>8</iEventChancePerTurn>
-			<iSoundtrackSpace>200</iSoundtrackSpace>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_DRONOLANSTOWER</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_MEDIEVALEPICTHEME_1</EraInfoSoundtrack>
@@ -216,13 +247,15 @@ Good luck! -->
 				<EraInfoSoundtrack>AS2D_MEDIEVALEPICTHEME_3</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_MEDIEVALEPICTHEME_4</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SONG_VIKING</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MID_ASIAN</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_JAPANESE_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CHINESE_ADAM</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MID_EUROPE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CIV_III_MOD_CELTIC</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_FANTASY1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SONG_CONQUESTS_FANTASY2</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CANTIGAENTRE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CANTIGAQUEN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BELICHA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FEHU</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ANSUR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CRYOFTHECELTS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CELTICCHANT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HEROSJOURNEY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FALLA</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ALLEGRI_MISERERE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ANONYMOUS_AY_SANTA_MARIA</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ANONYMOUS_LA_GAMBA</EraInfoSoundtrack>
@@ -243,6 +276,20 @@ Good luck! -->
 				<EraInfoSoundtrack>AS2D_PRAETORIUS_BRANSLE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_PRAETORIUS_VOLTE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SHEPPARD_MEDIA_VITA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GLORY_OF_BYZANTIUM</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ORTHODOX_RUSSIAN_CHANT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ILRITORNO</EraInfoSoundtrack> 
+				<EraInfoSoundtrack>AS2D_THEBYZANTINEEMPIRE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CARMINA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CARMINA_TWO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SCARBOROUGH_FAIR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GREENSLEEVES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CANSOS_DE_TROBAIRITZ</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_VETUSABIT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_IN_SPIRITUS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_RHIANNON</EraInfoSoundtrack>
+			    <EraInfoSoundtrack>AS2D_MIDECFULL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GREGMANDO</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -285,27 +332,36 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>9</iEventChancePerTurn>
-			<iSoundtrackSpace>160</iSoundtrackSpace>
 			<EraInfoSoundtracks>
-				<EraInfoSoundtrack>AS2D_BACH_ALLEGRO</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_ALLEGRO_ASSAI</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_ALLEMANDE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_BOUREE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_2_3</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_3_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_4_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_6_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_6_3</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_GIGUE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_LARGO</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_MENUET</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BACH_SARABANDE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BEETHOVEN_ALLEGRETTO</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BEETHOVEN_ANDANTE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_BEETHOVEN_ROMANCE_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOZART_ADAGIO</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOZART_ANDANTE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MOZART_ROMANCE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_JACKOLENT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SOPHIA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_PIRATESTAVERN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FEDERALOVERTURE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_LALUXILLIER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_PAVAN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_LACCORTA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ENGLISHDANCINGMASTER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FESTIVE_SOUNDS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_IRISH_SEASONG</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_KRUNK</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONATA_JOHANN_HEINRICH_SCHMELZER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MISSA_BRUXELLENSIS_SANCTUS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONATA_QUARTA_SCHMELZER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TORTUGA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TOCCATA_SECONDA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_LACATHERINE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CARRIEDAWAYACROSSTHESEA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CALATA_ALA_SPAGNOLA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EMBRACE_EVERYTHING</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EARLY_BAROQUE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EARLY_BAROQUE_TWO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GIOVANNI_VALENTINI_SONATA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BELL_ROCK</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MONTEVERDI</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GREGORIAN_MANDOLIN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FLUTE_OF_THE_RENAISSANCE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_JUGGLERS_JIG</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FISHERSHORNPIPE</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -348,10 +404,36 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>9</iEventChancePerTurn>
-			<iSoundtrackSpace>120</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
+				<EraInfoSoundtrack>AS2D_BACH_ALLEGRO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_ALLEGRO_ASSAI</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_ALLEMANDE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_BOUREE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_2_3</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_3_1</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_4_1</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_6_1</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_BRANDENBURG_6_3</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_GIGUE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_LARGO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_MENUET</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACH_SARABANDE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BEETHOVEN_ALLEGRETTO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BEETHOVEN_ANDANTE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BEETHOVEN_ROMANCE_1</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MOZART_ADAGIO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MOZART_ANDANTE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MOZART_ROMANCE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_BEETHOVEN_5_2</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DIESIRAE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ODETOJOY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_PACHELBEL_CANON</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_OLD_MAUI</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SONG_FOR_SIENNA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EDGE_OF_A_PETAL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_VIVALDI_GLORIA_DEO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HANDEL_FLUTE_SONATA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MOZART_FANTASIA</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_BEETHOVEN_6_1</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_BEETHOVEN_6_2</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_BRAHMS_3_2</EraInfoSoundtrack>
@@ -367,6 +449,16 @@ Good luck! -->
 				<EraInfoSoundtrack>AS2D_DVORAK_SLAVONIC_12</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_RIMSKY_KORSAKOV_SCHEHERAZADE_3</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_SAINT_SAENS_ALLEGRETTO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BACHFUGUEGMINOR</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_COLDNOBILITY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EASTERNVIOLIN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TIMEFORGOTTEN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_VIVALDI_SPRING</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_PATRIOT_REPRISE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CHOPIN_NOCTURNE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BEETHOVEN_ALLEGRETTO_7</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BEETHOVEN_ALLEGRO_CON_BRIO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ADAGIOALLEGRO</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -409,23 +501,31 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>80</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
-				<EraInfoSoundtrack>AS2D_ANFORTAS_WOUND</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_CHAIRMAN_DANCES</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_CHCONNE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_CHRISTIAN_ZEAL</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_COMMON_TONES</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_GRAND_PIANOLA_1</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_GRAND_PIANOLA_2</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HARMONIELEHRE</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HYMING_SLEWS</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_LOOPS_AND_VERSES</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_MEISTER_ECKHARDT</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_SHAKING_AND_TREMBLING</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_THE_PEOPLE_ARE_HEROES</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_TROMBA_LONTANA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ALEXANDERRAGTIME</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_STRAVINSKY_FIREBIRD</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BATTLEFRONTIER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FANFAREFORTHECOMMONMAN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_EIGHTEENTWELVEFINALE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_INTHESHADOWS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MYSTERIOUSCHOCOLATE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SHOSTAKOVICH_WALTZ_TWO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_RAGGINTHEWAVES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SYMPHONYTEN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TALLYHO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TESTFLIGHTDELIGHT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ENTERTAINER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_RIDEOFTHEVALKERIES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_VITALFORCE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DANCE_MACABRE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MOUNTAIN_KING</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BOLERO_RAVEL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FAUST_MEPHISTOPHELES_RONDO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_STONE_GUARDIANS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MELODY_OF_WATER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DANCING_MAD</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_CARNIVAL_OF_THE_ANIMALS_AQUARIUM</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DECISIVEBATTLE</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -468,8 +568,6 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>80</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_ANFORTAS_WOUND</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_CHAIRMAN_DANCES</EraInfoSoundtrack>
@@ -485,6 +583,11 @@ Good luck! -->
 				<EraInfoSoundtrack>AS2D_SHAKING_AND_TREMBLING</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_THE_PEOPLE_ARE_HEROES</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_TROMBA_LONTANA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FIREONHIGH</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SACRED_GROUND</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TURQUOISE_MOON</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MOJAVE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SMASHFULL</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -527,9 +630,14 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>40</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
+				<EraInfoSoundtrack>AS2D_THOSEWHOFIGHTFURTHER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ONE_DAY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DYSTOPIAN_OVERTURE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_JUMP</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DIOMEDE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_IMMORTALLEGACY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ARES</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_MEGALOPOLIS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ASSEMBLY</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_DAISUKE</EraInfoSoundtrack>
@@ -537,6 +645,16 @@ Good luck! -->
 				<EraInfoSoundtrack>AS2D_HYDRO</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_PAPERHOUSE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_STARS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_THEAMULET</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BEYOND_THE_SUNSET</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_VITRIOLICASTROKE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ESRISEOFACHAMPION</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BLOODOFANEWWORLD</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_APHELION</EraInfoSoundtrack>         
+				<EraInfoSoundtrack>AS2D_ETERNAL_LIGHT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ICARUS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SOARING_DRAGONS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DRAGONLAND</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -579,9 +697,20 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>40</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
+				<EraInfoSoundtrack>AS2D_FUTURETECHNOBEAT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HELLOWORLD</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ELECTRICPEOPLE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BROKENPHANTASM</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MODERNFULL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NIGHTENGALEFULL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MULHOLLAND</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ENDLESS_WONDER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SHOOTING_IT_OUT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_STARSFULL</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FROZENMOMENT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BROWNIAN_MOTION</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_PROFONDEURS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_MEGALOPOLIS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_ASSEMBLY</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_DAISUKE</EraInfoSoundtrack>
@@ -631,12 +760,20 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>40</iSoundtrackSpace>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_FINAL_FRONTIER</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMARS</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMERCURY</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINENEPTUNE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_BOUNDS_OF_THE_UNIVERSE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SOAR_AND_GLIDE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_UNKNOWN_ARTES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SANCTUM</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SANCTUARY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_GRADIUSFIVE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SOLAR_ECHOS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_FAR_CENTAURUS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_RED_GIANT</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ETERNITY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_MESSIER_45</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DECIMATOR</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -679,13 +816,18 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>40</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>0</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
-				<EraInfoSoundtrack>AS2D_FINAL_FRONTIER</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMARS</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMERCURY</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINENEPTUNE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_XENOSPHERES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ELYSION</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DEEP_SPACE_EXPEDITION</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DYSTOPIA</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_UNEXPLORED_TERRITORIES</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_DISRUPTION</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_TERRAFORMING</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ENDLESS_FRONTIER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_STAR_ODYSSEY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_SKY_ATLAS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_ENTER_INFINITY</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -728,13 +870,19 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>80</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>40</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>0</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
-				<EraInfoSoundtrack>AS2D_FINAL_FRONTIER</EraInfoSoundtrack>
-				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMARS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NOVUS_MAGNIFICAT_EXULTATE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NOVUS_ONE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NOVUS_TWO</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_NOVUS_THREE</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMERCURY</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HOLSTLEVINEVENUS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMARS</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HOLSTLEVINEJUPITER</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HOLSTLEVINESATURN</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_HOLSTLEVINEURANUS</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_HOLSTLEVINENEPTUNE</EraInfoSoundtrack>
+				<EraInfoSoundtrack>AS2D_PLUTO_BRINGER_OF_CHANGE</EraInfoSoundtrack>
 			</EraInfoSoundtracks>
 			<CitySoundscapes>
 				<CitySoundscape>
@@ -776,8 +924,6 @@ Good luck! -->
 			<iGreatPeoplePercent>100</iGreatPeoplePercent>
 			<iAnarchyPercent>40</iAnarchyPercent>
 			<iEventChancePerTurn>10</iEventChancePerTurn>
-			<iSoundtrackSpace>40</iSoundtrackSpace>
-			<bFirstSoundtrackFirst>1</bFirstSoundtrackFirst>
 			<EraInfoSoundtracks>
 				<EraInfoSoundtrack>AS2D_FINAL_FRONTIER</EraInfoSoundtrack>
 				<EraInfoSoundtrack>AS2D_HOLSTLEVINEMARS</EraInfoSoundtrack>
