@@ -64,11 +64,11 @@ class MapConstants:
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.
-		self.fRiverThreshold = 0.20
+		self.fRiverThreshold = 0.005
 
 		# This value controls the number of mid-altitude lake depressions per land map square.
 		# It will become a lake if enough water flows into the depression.
-		self.fLakesPerPlot = 0.009
+		self.fLakesPerPlot = 0.015
 
 		# This value controls the number of deep ocean threnches per ocean map square.
 		self.fThrenchesPerPlot = 0.006
@@ -78,7 +78,7 @@ class MapConstants:
 		self.iLakeSizeMinPercent = 30
 		# ---The following values should all be between 0 and 1.
 		# fLakeSizeFactorChance controls the percentage of lakes that are affected by the iLakeSizeMinPercent.
-		self.fLakeSizeFactorChance = 0.4
+		self.fLakeSizeFactorChance = 0
 		# These modify lake size based on underlying terrain.
 		self.fHeatLakeFactor = 0.3 # Desert, dunes & salt flats.
 		self.fColdLakeFactor = 0.3 # Tundra, Permafrost & Ice.
@@ -384,7 +384,7 @@ class MapConstants:
 		self.iHeight	= MAP.getGridHeight()
 		self.iArea		= self.iWidth * self.iHeight
 		self.iWorldSize	= iWorldSize = MAP.getWorldSize()
-		self.iMaxLakeSize = GC.getWorldInfo(iWorldSize).getOceanMinAreaSize() - 1
+		self.iMaxLakeSize = int(1.25 * (GC.getWorldInfo(iWorldSize).getOceanMinAreaSize() - 1))
 		# Too many meteors will simply destroy the Earth, it also prevent an endless loop if the pangea can't be broken.
 		self.iMaxMeteorCount = 15 + 5 * iWorldSize
 		# Minimum size for a meteor strike that attemps to break pangaeas.
@@ -456,39 +456,39 @@ class MapConstants:
 		seaLevel = GC.getSeaLevelInfo(MAP.getSeaLevel()).getSeaLevelChange()
 		if self.bEarthlike:
 			if not seaLevel:
-				self.fLandPercent = .3
+				self.fLandPercent = .35
+			elif seaLevel > 0:
+				self.fLandPercent = .30
+			else:
+				self.fLandPercent = .40
+		elif self.bArchipelago:
+			if not seaLevel:
+				self.fLandPercent = .30
 			elif seaLevel > 0:
 				self.fLandPercent = .25
 			else:
 				self.fLandPercent = .35
-		elif self.bArchipelago:
-			if not seaLevel:
-				self.fLandPercent = .25
-			elif seaLevel > 0:
-				self.fLandPercent = .2
-			else:
-				self.fLandPercent = .3
 		elif self.bWaterworld:
 			if not seaLevel:
-				self.fLandPercent = .15
+				self.fLandPercent = .20
 			elif seaLevel > 0:
-				self.fLandPercent = .1
+				self.fLandPercent = .10
 			else:
-				self.fLandPercent = .2
+				self.fLandPercent = .25
 		elif self.bDryland:
 			if not seaLevel:
-				self.fLandPercent = .85
+				self.fLandPercent = .90
 			elif seaLevel > 0:
-				self.fLandPercent = .7
+				self.fLandPercent = .75
 			else:
 				self.fLandPercent = 1.0
 		elif self.bPangea:
 			if not seaLevel:
-				self.fLandPercent = .45
+				self.fLandPercent = .50
 			elif seaLevel > 0:
-				self.fLandPercent = .35
+				self.fLandPercent = .40
 			else:
-				self.fLandPercent = .55
+				self.fLandPercent = .60
 		print "Land percent = %f" % self.fLandPercent
 
 mc = None
@@ -2291,7 +2291,8 @@ class LakeMap:
 					if bValid:
 						lakeNeighbors.append(LakePlot(x, y, i, relAltMap[i], iMergeSize))
 			if len(lakeNeighbors) > 1:
-				lakeNeighbors.sort(lambda a, b:cmp(a.fHeight, b.fHeight))
+				# lakeNeighbors.sort(lambda a, b:cmp(a.fHeight, b.fHeight))
+				shuffle(lakeNeighbors)
 			while True:
 				if len(lakeNeighbors) == 0:
 					return 1
