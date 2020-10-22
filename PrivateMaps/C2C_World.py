@@ -76,34 +76,35 @@ class MapConstants:
 		self.fLakesPercent = 0.04
 
 		# --- The following values should all be between 0 and 1 ---
-		# fLakeSizeMinPercent sets the minimum percentage an added lake is shrunk to when fLakeSizeFactorPercent roll true.
-		# Max size of added lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
-		self.fLakeSizeMinPercent = 0.75
+		# Base size of added lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
+		# A random value between fLakeSizeMinPercent and 1.0 is multiplied to spawned lakesizes when fLakeSizeFactorPercent roll true.
+		self.fLakeSizeMinPercent = 0.50
 		# fLakeSizeFactorPercent controls the percentage of lakes that are affected by the fLakeSizeMinPercent.
-		self.fLakeSizeFactorPercent = 0.5
-		# These reduce lake size by a provided multiplicative factor, based on underlying terrain.
-		self.fHeatLakeFactor = 0.25 # Desert, dunes & salt flats.
-		self.fColdLakeFactor = 0.25 # Tundra, Permafrost & Ice.
+		self.fLakeSizeFactorPercent = 0.50
+		# These alter lake size by a provided multiplicative factor, based on underlying terrain.
+		self.fHeatLakeFactor = 0.10 # Desert, dunes & salt flats.
+		self.fColdLakeFactor = 0.25 # Tundra, permafrost & ice.
+		self.fWetLakeFactor = 1.25 # Lush, marsh, & muddy.
 		# This value sets the relative minimum altitude of lake depressions.
 		# It is relative to fLandHeight. A value of zero means that lakes can appear as low as the maximum ocean height.
-		self.fRelMinLakeAlt = 0.05
-		# This adjusts the minimum factor a lake can be shrunk to from starting at a high altitude; related to fRelMinLakeAlt.
+		self.fRelMinLakeAlt = 0.10
+		# This normalizes the minimum factor a lake can be shrunk to from starting at a high altitude; related to fRelMinLakeAlt. 0 -> full range, 1-> no shrinkage.
 		self.fAltitudeMinFactor = 0.15
-		# This adjusts the minimum factor a lake can be shrunk to from low rainfall on starting location.
+		# This normalizes the minimum factor a lake can be shrunk to from low rainfall on starting location. 0 -> full range, 1-> no shrinkage.
 		# Effectively increases randomization of lakesizes when a low value is used.
 		self.fRainMinFactor = 0.25
 		# This modifies the shape of how lakes form. 1 creates longer, snake-like lakes while 0 makes all lakes circular as can be.
-		self.fLakeEccentricity = 0.3
+		self.fLakeEccentricity = 0.40
 
 		# Percent of way to max lake size (as defined in the CIV4WorldInfo.xml minus 1) at which point there is a 50/50 chance for a lake
 		# to be either fresh or salt water. See fBlurHarshness for full impact of size on salinity type. Must be >= 0.0. If >1, larger lakes may be freshwater.
-		self.fBlurOnset = 0.8
+		self.fBlurOnset = 0.80
 		# This adjusts the blurring between large freshwater lakes and saltwater seas (modified logistic growth rate). Must be >= 0.0, when >= 100 immediate cutoff.
 		# 0.0 gives a 50/50 chance any body of water (sans largest) will be freshwater or ocean, regardless of fBlurOnset.
 		# 1.0 gives a ~90% chance of correct size at twice the relative onset; e.g. if onset is 0.8, 90% of lakes size 0.4 are fresh, and 1.6 saltwater
 		# 2.0 makes the blur happen twice faster, e.g. ~90% chance for right type at ~0.6 or 1.2, and so on so forth.
 		# These values are also locally modified by terrain, e.g. salt flats adjacency increases saltwater odds significantly, high rainfall freshwater, etc.
-		self.fBlurHarshness = 1.0
+		self.fBlurHarshness = 1.00
 
 		# The chance that a floodplain may appear on a valid riverside. Between 0 and 1.
 		self.fFloodplainChance = 0.5
@@ -2170,10 +2171,13 @@ class LakeMap:
 		WATER		= mc.WATER
 		DESERT		= mc.DESERT
 		DUNES		= mc.DUNES
+		SALT_FLATS	= mc.SALT_FLATS
 		ICE			= mc.ICE
 		FROST		= mc.FROST
 		TUNDRA	 	= mc.TUNDRA
-		SALT_FLATS	= mc.SALT_FLATS
+		LUSH		= mc.LUSH
+		MARSH		= mc.MARSH
+		MUDDY		= mc.MUDDY
 		i = -1
 		for y in xrange(iHeight):
 			for x in xrange(iWidth):
@@ -2203,6 +2207,7 @@ class LakeMap:
 		fLakeSizeModChance = mc.fLakeSizeFactorPercent
 		fHeatMod = mc.fHeatLakeFactor
 		fColdMod = mc.fColdLakeFactor
+		fWetMod = mc.fWetLakeFactor
 		fAltitudeMinFactor = mc.fAltitudeMinFactor
 		fRainMinFactor = mc.fRainMinFactor
 		tData = tm.terrData
@@ -2216,34 +2221,36 @@ class LakeMap:
 					fTerrainMod = fHeatMod
 				elif HERE == ICE or HERE == TUNDRA or HERE == FROST:
 					fTerrainMod = fColdMod
+				elif HERE == LUSH or HERE == MARSH or HERE == MUDDY:
+					fTerrainMod = fWetMod
 				else:
 					fTerrainMod = 1.0
+				# For the next two mods; we're remapping factor in [0, 1] range onto mod of range [min, 1] instead of truncating at min
 				# Altitude Mod; smaller lakes at higher altitudes as a linear func of % of way to max land height (1.0) from altitude
-				fAltitudeMod = max(fAltitudeMinFactor, 1.0 - (altitude[i] - fLandHeight) / (1.0 - fLandHeight))
-				# Rain Mod; lakesize adjusted by rainfall normalized across potential lakepits
-				fRainMod = max(fRainMinFactor, avrRainMap[i] / fLakeRainMax)
+				fAltitudeFactor = (1.0 - altitude[i]) / (1.0 - fLandHeight)
+				fAltitudeMod =  fAltitudeMinFactor + fAltitudeFactor * (1.0 - fAltitudeMinFactor)
+				# Rain Mod; lakesize adjusted by rainfall normalized across potential lakepits, normalized to fRainMinFactor.
+				fRainMod = fRainMinFactor + (avrRainMap[i] / fLakeRainMax) * (1.0 - fRainMinFactor)
 				# Size Mod; randomly reduces lake size based on custom values set.
 				if random() < fLakeSizeModChance:
-					fSizeMod = max(random(), fLakeSizeMinPercent)
+					fSizeMod = random.uniform(fLakeSizeMinPercent, 1.0)
 				else:
 					fSizeMod = 1.0
 
 				# Target lakesize
 				iTargetLakeSize = int(round(iMaxLakeSize * fRainMod * fTerrainMod * fAltitudeMod * fSizeMod))
-				if iTargetLakeSize > iMaxLakeSize:
-					iTargetLakeSize = iMaxLakeSize
 				
 				# Generate lake, so long as isn't too big
 				if iTargetLakeSize > 0 and (iTargetLakeSize <= iTargetLakeTiles - iTotalLakeTilesPlaced):
 					# lakeAreaMap.defineAreas(self.isLake)
 					print "	Starting lake at (%d, %d) of target size: %d" % (x, y, iTargetLakeSize)
 					# print "	fRain: %f, fTerrain: %f, fAltitude: %f, fSize: %f" % (fRainMod, fTerrainMod, fAltitudeMod, fSizeMod)
-					iLakeTilesAdded = self.expandLake(x, y, i, lakeAreaMap, iTargetLakeSize, iMaxLakeSize, WATER)
+					iLakeTilesAdded = self.expandLake(x, y, i, lakeAreaMap, iTargetLakeSize, WATER)
 					if iLakeTilesAdded > 0:
 						iTotalLakeTilesPlaced += iLakeTilesAdded
 						iLakePitsUsed += 1
 						if iLakeTilesAdded != iTargetLakeSize:
-							print "	Tried to make lake of size %i, instead formed size %i!" % (iTargetLakeSize, iLakeTilesAdded)
+							print "	Tried to add %i tiles, instead added %i!" % (iTargetLakeSize, iLakeTilesAdded)
 			if iTotalLakeTilesPlaced >= iTargetLakeTiles:
 				break
 		if iTotalLakeTilesPlaced < iTargetLakeTiles: #if failed to place lake tiles up to target
@@ -2256,8 +2263,7 @@ class LakeMap:
 		self.defineWaterTerrain(iWidth, iHeight, iArea, em.fLandHeight, WATER)
 
 
-	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, iMaxLakeSize, WATER):
-
+	def expandLake(self, x, y, i, lakeAreaMap, iLakeSize, WATER):
 		class LakePlot:
 			def __init__(self, x, y, i, fHeight):
 				self.x = x
@@ -2285,9 +2291,7 @@ class LakeMap:
 				print "	Skipping: Plot (%i, %i) has ocean adjacency at (%i, %i)" % (x, y, xx, yy)
 				return iPlacedTiles
 
-		# Loop in 3 parts. First, add currently selected plot to this lake
-		# Then collect a list of all valid neighbors for this lake, merging and/or breaking as necessary for harbor.
-		# Then sort that list, selecting the best one to be stored in thePlot as the selected plot.
+		# Grow lake, in 3 main parts. 1) Add currently selected tile, 2) find new potential neighbors, 3) sort and select best neighbor.
 		while iLakeSize > 0:
 			# Part 1, add current tile "thePlot" to thisLake
 			i = thePlot.i
@@ -2298,7 +2302,7 @@ class LakeMap:
 				iPlacedTiles += 1
 				plotData[i] = WATER
 				checkedPlotDict[i] = 1
-				thisLake = self.updateLake(thisLake, lakeAreaMap, i)
+				thisLake = self.updateLake(thisLake, lakeAreaMap, i) # This automatically merges any lakes touching thePlot into thisLake
 
 			# Part 2, look at new neighbors (xx, yy, ii) and filter for list of potential tiles to grow to. Merge/make harbor if necessary.
 			for dir1 in xrange(1, 5):
@@ -2308,21 +2312,23 @@ class LakeMap:
 					continue
 				checkedPlotDict[ii] = 1
 
-				# Check if we've touched ocean
+				# If we've touched water, it's either our own lake (already merged), or ocean.
 				if plotData[ii] == WATER:
-					if self.lakeData[ii] != 1:
+					if self.lakeData[ii] == 1: # This has already been merged in part 1 self.updateLake, but didn't grab the checked plot
+						checkedPlotDict[ii] = 1
+						continue
+					else: # This is ocean, which means we no longer should have a lake. Convert to ocean and stop expanding.
 						for index in thisLake:
 							self.lakeData[index] = -1
-							print "	DIDN'T DO HARBOR"
-							# self.makeHarbour(x, y, WATER, self.lakeData, plotData) # Make Harbour.
-							return iPlacedTiles # We managed to place some tiles, even if they did become ocean
-				else: # If neighbor is land and we aren't making a harbour
+						print "	FOUND OCEAN: DIDN'T DO HARBOR"
+						return iPlacedTiles # We managed to place >1 tiles, even if they did become ocean
+				else: # If neighbor is land, and we aren't making a harbour, add to list of neighbors to grow next
 					lakeNeighbors.append(LakePlot(xx, yy, ii, relAltMap[ii]))
-			# Take a break here to see if we're done placing tiles
+			# Take a break here to see if we're done placing tiles and can quit
 			if iLakeSize <= 0:
 				return iPlacedTiles
 
-			# Part 3, figure out next best tile to grow, and set that tile as next to expand into for following loop cycle
+			# Part 3, figure out next best tile to grow if possible, and set that tile as next to expand into for following loop cycle
 			if len(lakeNeighbors) > 1:
 				# distance = plotDistance(x, y, int(round(lakeCenter[0])), int(round(lakeCenter[1]))) + random()
 				shuffle(lakeNeighbors)
@@ -2334,7 +2340,7 @@ class LakeMap:
 					thePlot = lakeNeighbors.pop(0)
 
 		print "	Unexpected escape from expandLake! Returning lake grown to size %i, with %i placed tiles" % (len(thisLake), iPlacedTiles)
-		return PlacedTiles
+		return iPlacedTiles
 
 	def updateLake(self, thisLake, lakeAreaMap, newPlotIndex):
 		"""
@@ -2344,89 +2350,22 @@ class LakeMap:
 
 		thisLake.append(newPlotIndex)
 		self.lakeData[newPlotIndex] = 1
-		
-		# Redefine all areas on map that match lakeData criteria.
-		lakeAreaMap.defineAreas(self.isLake)
-		
-		# the Area class buried in lakeAreaMap is what we want for later
-		lakeArea = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[newPlotIndex])
-		print "	New center after update: (%f, %f), size: %i" % (lakeArea.avgX, lakeArea.avgY, lakeArea.size)
 
-		print "	LAKE WAS:"
-		print [GetCoordFromIndex(i) for i in thisLake]
+		# Redefine all areas on map that match lakeData criteria. Could be cheaper, but eh.
+		lakeAreaMap.defineAreas(self.isLake)
+
+		# the ID value of the Area class buried in lakeAreaMap is what we want for merging now, and Area.avgX, Area.avgY for later sorting
+		lakeArea = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[newPlotIndex])
+		# print "	New center after update: (%f, %f), size: %i" % (lakeArea.avgX, lakeArea.avgY, lakeArea.size)
 
 		# Rebuild thisLake by looking at index of tiles that match areaID value for areaID of our new lake tile.
-		# Don't need to update la
+		# This merges lake tiles that were adjacent to newPlotIndex into thisLake
 		thisLake = [plotIndex for plotIndex, areaID in enumerate(lakeAreaMap.areaID) if areaID == lakeArea.ID]
 
-		print "	LAKE IS NOW:"
-		print [GetCoordFromIndex(i) for i in thisLake]
+		# print "Lake tiles are:"
+		# print [GetCoordFromIndex(i) for i in thisLake]
 
 		return thisLake
-		
-
-
-	# It looks bad to have a lake sitting right next to the coast.
-	# This function tries to minimize that occurance by replacing it with a natural harbour, which looks much better.
-	def makeHarbour(self, x, y, WATER, lakeData, plotData):
-		candidateList = []
-		#N
-		i = GetIndex(x, y + 2)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			ii = GetIndex(x, y + 1)
-			candidateList.append(ii)
-		#S
-		i = GetIndex(x, y - 2)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			ii = GetIndex(x, y - 1)
-			candidateList.append(ii)
-		#E
-		i = GetIndex(x + 2, y)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			ii = GetIndex(x + 1, y)
-			candidateList.append(ii)
-		#W
-		i = GetIndex(x - 2, y)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			ii = GetIndex(x - 1, y)
-			candidateList.append(ii)
-		#NW
-		i = GetIndex(x - 1, y + 1)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			if random() <= 0.5:
-				ii = GetIndex(x - 1, y)
-			else:
-				ii = GetIndex(x, y + 1)
-			candidateList.append(ii)
-		#SE
-		i = GetIndex(x + 1, y - 1)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			if random() <= 0.5:
-				ii = GetIndex(x + 1, y)
-			else:
-				ii = GetIndex(x, y - 1)
-			candidateList.append(ii)
-		#NE
-		i = GetIndex(x + 1, y + 1)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			if random() <= 0.5:
-				ii = GetIndex(x, y + 1)
-			else:
-				ii = GetIndex(x + 1, y)
-			candidateList.append(ii)
-		#SW
-		i = GetIndex(x - 1, y - 1)
-		if i >= 0 and plotData[i] == WATER and not lakeData[i]:
-			if random() <= 0.5:
-				ii = GetIndex(x, y - 1)
-			else:
-				ii = GetIndex(x - 1, y)
-			candidateList.append(ii)
-
-		shuffle(candidateList)
-		i = candidateList[0]
-		plotData[i] = WATER
-		print "	Made an harbour"
 
 
 	# Ensures the tile type at edges of wrapped world match, so no visible seam is drawn (fault of EXE or something)
@@ -3914,7 +3853,7 @@ class StartPlot:
 		self.owner = None
 		self.avgDistance = 0
 
-	def isCoast(self): #Adjust for fresh, saltwater coast differential!
+	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
 		return not waterArea.isNone() and not waterArea.isLake()
 
