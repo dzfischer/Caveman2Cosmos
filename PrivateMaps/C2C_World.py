@@ -72,7 +72,7 @@ class MapConstants:
 		self.fTrenchesPercent = 0.006
 
 		# This value controls how many lake tiles will be generated as a percent of land tiles; the actual number of land tiles will NOT
-		# be impacted by any value here, so long as there is ocean on the map. 0.01 approximates Earth's ~1% lake land coverage.
+		# be impacted by any value here, so long as there is ocean on the map. 0.01 approximates Earth's irl ~1% lake-land ratio.
 		self.fLakesPercent = 0.04
 
 		# --- The following values should all be between 0 and 1 ---
@@ -508,7 +508,7 @@ class MapConstants:
 				self.fLandPercent = .35
 			else:
 				self.fLandPercent = .55
-		# Increase land percent by lake tiles added; # of land tiles not impacted by large lake percentage (ocean may be though)
+		# Increase land percent by lake tiles added such that # of land tiles are not impacted by large lake percentage (ocean may be though)
 		self.fLandPercent = min(1.0, self.fLandPercent * (1.0 + self.fLakesPercent))
 		print "Land percent = %f" % self.fLandPercent
 
@@ -1288,8 +1288,7 @@ class ElevationMap(FloatMap):
 		indexList = array('B', [0] * self.iArea)
 		# Min altitude for lakes is fRelMinLakeAlt multiple of distance from max normalized altitude of 1.0;
 		# e.g. if sea level (fLandHeight) is 0.7 and fRelMinLakeAlt 0.33, this makes 0.8 the actual min lake altitude.
-		fMinLakeAlt = (1.0 - fLandHeight) * mc.fRelMinLakeAlt + fLandHeight
-		fLakeAltThreshold = max(fLandHeight, fMinLakeAlt)
+		fMinLakeAlt = LinearMapping(0, 1, mc.fRelMinLakeAlt, fLandHeight, 1)
 
 		# Generate a list of tiles that are possible to be lake pits
 		iStartY = int(round(self.iHeight * (1 - fPolarLat)))
@@ -1299,7 +1298,7 @@ class ElevationMap(FloatMap):
 			for x in xrange(self.iWidth):
 				i += 1
 				# if land tile equal or above min altitude
-				if elevationData[i] >= fLakeAltThreshold:
+				if elevationData[i] >= fMinLakeAlt:
 					bPit = True
 					# loop thru adjacents to check for tiles to ignore
 					for direction in xrange(1, 9):
@@ -1309,7 +1308,7 @@ class ElevationMap(FloatMap):
 						if ii == -1:
 							continue
 						# if adjacent also equal or below min altitude, or adjacent to already selected lake potential spot; original cannot be lake
-						if elevationData[ii] <= fLakeAltThreshold or indexList[ii]:
+						if elevationData[ii] <= fMinLakeAlt or indexList[ii]:
 							bPit = False
 							break
 					# add valid to potential lake spot, if no invalid adjacencies
@@ -1332,7 +1331,7 @@ class ElevationMap(FloatMap):
 						fLowestAlt = elevationData[ii]
 			# lower tile to just below altitude of lowest neighbor if necessary. fLowestAlt > fLakeAltThresh by above landList filter
 			if elevationData[i] >= fLowestAlt:
-				elevationData[i] = max(fLakeAltThreshold, fLowestAlt - 0.001)
+				elevationData[i] = max(fMinLakeAlt, fLowestAlt - 0.001)
 			iPitsMade += 1
 			if iPitsMade == self.iNumLakePits:
 				break
@@ -2200,7 +2199,7 @@ class LakeMap:
 		shuffle(lakePitList)
 		lakeAreaMap	= AreaMap()
 		self.lakeData = array('b', [0] * iArea)
-		iTargetLakeTiles = iArea * mc.fLandPercent * mc.fLakesPercent
+		iTargetLakeTiles = int(round(iArea * mc.fLandPercent * mc.fLakesPercent))
 		iTotalLakeTilesPlaced = iLakePitsUsed = 0
 		iMaxLakeSize = mc.iMaxLakeSize
 		fLakeSizeMinPercent = mc.fLakeSizeMinPercent
@@ -2225,24 +2224,21 @@ class LakeMap:
 					fTerrainMod = fWetMod
 				else:
 					fTerrainMod = 1.0
-				# For the next two mods; we're remapping factor in [0, 1] range onto mod of range [min, 1] instead of truncating at min
 				# Altitude Mod; smaller lakes at higher altitudes as a linear func of % of way to max land height (1.0) from altitude
-				fAltitudeFactor = (1.0 - altitude[i]) / (1.0 - fLandHeight)
-				fAltitudeMod =  fAltitudeMinFactor + fAltitudeFactor * (1.0 - fAltitudeMinFactor)
-				# Rain Mod; lakesize adjusted by rainfall normalized across potential lakepits, normalized to fRainMinFactor.
-				fRainMod = fRainMinFactor + (avrRainMap[i] / fLakeRainMax) * (1.0 - fRainMinFactor)
+				fAltitudeMod = LinearMapping(fLandHeight, 1.0, altitude[i], fAltitudeMinFactor, 1)
+				# Rain Mod; lakesize adjusted by rainfall normalized across potential lakepits, renormalized to fRainMinFactor.
+				fRainMod = LinearMapping(0, 1, (avrRainMap[i]/fLakeRainMax), fRainMinFactor, 1)
 				# Size Mod; randomly reduces lake size based on custom values set.
 				if random() < fLakeSizeModChance:
-					fSizeMod = random.uniform(fLakeSizeMinPercent, 1.0)
+					fSizeMod = uniform(fLakeSizeMinPercent, 1.0)
 				else:
 					fSizeMod = 1.0
 
-				# Target lakesize
+				# How big we expect a lake starting at this tile to grow to
 				iTargetLakeSize = int(round(iMaxLakeSize * fRainMod * fTerrainMod * fAltitudeMod * fSizeMod))
 				
 				# Generate lake, so long as isn't too big
 				if iTargetLakeSize > 0 and (iTargetLakeSize <= iTargetLakeTiles - iTotalLakeTilesPlaced):
-					# lakeAreaMap.defineAreas(self.isLake)
 					print "	Starting lake at (%d, %d) of target size: %d" % (x, y, iTargetLakeSize)
 					# print "	fRain: %f, fTerrain: %f, fAltitude: %f, fSize: %f" % (fRainMod, fTerrainMod, fAltitudeMod, fSizeMod)
 					iLakeTilesAdded = self.expandLake(x, y, i, lakeAreaMap, iTargetLakeSize, WATER)
@@ -2259,7 +2255,6 @@ class LakeMap:
 		if mc.bWrapX:
 			# Avoid Water-plane graphical glitch at the map edges.
 			self.avoidWaterGlitch(iWidth, iHeight, WATER)
-		# lakeAreaMap.defineAreas(self.isLake)
 		self.defineWaterTerrain(iWidth, iHeight, iArea, em.fLandHeight, WATER)
 
 
@@ -2273,9 +2268,10 @@ class LakeMap:
 
 		plotData = tm.plotData
 		relAltMap = em.relAltMap3x3
-		thePlot = LakePlot(x, y, i, relAltMap[i])
+		thePlot = LakePlot(x, y, i, em.data[i])
 
-		thisLake = []
+		self.lakeCenter = (x, y)
+		self.thisLake = []
 		lakeNeighbors = []
 		iPlacedTiles = 0 # Explicitly keep track of how many tiles we place, this value will be returned
 		checkedPlotDict = {i:1} # Keeping track of tiles to avoid excess checking in some cases w/very large lakes
@@ -2296,13 +2292,14 @@ class LakeMap:
 			# Part 1, add current tile "thePlot" to thisLake
 			i = thePlot.i
 			if plotData[i] == WATER:
-				print "	CHECK: Doubling on plot (%i, %i)! Size: %i" % (thePlot.x, thePlot.y, iLakeSize)
+				print "	ERROR: Doubling on plot (%i, %i)! Placed %i tiles!" % (thePlot.x, thePlot.y, iPlacedTiles)
+				return iPlacedTiles
 			else:
 				iLakeSize -= 1
 				iPlacedTiles += 1
 				plotData[i] = WATER
 				checkedPlotDict[i] = 1
-				thisLake = self.updateLake(thisLake, lakeAreaMap, i) # This automatically merges any lakes touching thePlot into thisLake
+				self.updateLake(lakeAreaMap, i) # This automatically merges any lakes touching thePlot into thisLake
 
 			# Part 2, look at new neighbors (xx, yy, ii) and filter for list of potential tiles to grow to. Merge/make harbor if necessary.
 			for dir1 in xrange(1, 5):
@@ -2318,37 +2315,82 @@ class LakeMap:
 						checkedPlotDict[ii] = 1
 						continue
 					else: # This is ocean, which means we no longer should have a lake. Convert to ocean and stop expanding.
-						for index in thisLake:
+						for index in self.thisLake:
 							self.lakeData[index] = -1
 						print "	FOUND OCEAN: DIDN'T DO HARBOR"
 						return iPlacedTiles # We managed to place >1 tiles, even if they did become ocean
 				else: # If neighbor is land, and we aren't making a harbour, add to list of neighbors to grow next
-					lakeNeighbors.append(LakePlot(xx, yy, ii, relAltMap[ii]))
+					lakeNeighbors.append(LakePlot(xx, yy, ii, em.data[ii]))
 			# Take a break here to see if we're done placing tiles and can quit
-			if iLakeSize <= 0:
+			if iLakeSize <= 0 or len(lakeNeighbors) == 0:
 				return iPlacedTiles
 
 			# Part 3, figure out next best tile to grow if possible, and set that tile as next to expand into for following loop cycle
 			if len(lakeNeighbors) > 1:
-				# distance = plotDistance(x, y, int(round(lakeCenter[0])), int(round(lakeCenter[1]))) + random()
-				shuffle(lakeNeighbors)
-				# lakeNeighbors.sort(lambda a, b:cmp(a.fHeight, b.fHeight))
-				# print "%d, %d" % (lakeNeighbors[0], lakeNeighbors[1])
-				if len(lakeNeighbors) == 0:
-					return iPlacedTiles
-				else:
-					thePlot = lakeNeighbors.pop(0)
+				lakeNeighbors.sort(key=self.weightedDistance, reverse=True) # Sort from high score to low
+			thePlot = lakeNeighbors.pop(0)
 
-		print "	Unexpected escape from expandLake! Returning lake grown to size %i, with %i placed tiles" % (len(thisLake), iPlacedTiles)
+		print "	Unexpected escape from expandLake! Returning lake grown to size %i, with %i placed tiles" % (len(self.thisLake), iPlacedTiles)
 		return iPlacedTiles
 
-	def updateLake(self, thisLake, lakeAreaMap, newPlotIndex):
+
+	def weightedDistance(self, neighborPlot):
 		"""
+		Takes a LakePlot object, finds how likely it should be picked next to expand to given the current thisLake
+		"""
+		maxRelativeRadius = 5 # Maximum maximum radius a lake can reach compared to expected shape. Greater value -> greater effective fEccentricity value
+		fEccentricity = mc.fLakeEccentricity
+		fLandHeight = em.fLandHeight
+		currLakeSize = len(self.thisLake)
+
+		expectedlakeRadius = ((currLakeSize+1) / pi) ** (0.5)
+		neighborPlotRadius = self.calculateCenterPlotRadius(neighborPlot.i)
+		radiusRatio = neighborPlotRadius / expectedlakeRadius
+
+		# 1 at water level, 0 at max altitude
+		heightDiffPercent = LinearMapping(fLandHeight, 1.0, neighborPlot.fHeight, 1, 0)
+
+		# 1 at or below expected radius, linearally decreasing to 0 at maxRelativeRadius
+		radialDistPercent = LinearMapping(1, maxRelativeRadius, radiusRatio, 1, 0) # CHANGE TO NOT NORMALIZED; say 3 tile range? 
+
+		# This is our final score for selecting the tile or not.
+		weightedScore = (fEccentricity * heightDiffPercent) + (1 - fEccentricity) * radialDistPercent
+
+		x, y = GetCoordFromIndex(neighborPlot.i)
+		# print "		Neighbor (%i, %i, alt: %f, rad: %f) has score: %f" % (x, y, neighborPlot.fHeight, neighborPlotRadius, weightedScore)
+		# print "		Breakdown:: heightDif: %f, radialDist: %f" % (heightDiffPercent, radialDistPercent)
+		# print "		Breakdown:: currLakeSize: %i, expectedR: %f, plotR: %f" % (currLakeSize, expectedlakeRadius, neighborPlotRadius)
+
+		return weightedScore
+
+	def calculateCenterPlotRadius(self, plotIndex):
+		"""
+		This is basically plotDistance from CvGameCoreUtils.h (but for float values) with a fixed lakeCenter arg
+		"""
+		x, y = GetCoordFromIndex(plotIndex)
+		bWrapX, bWrapY = mc.bWrapX, mc.bWrapY
+		iWidth, iHeight = mc.iWidth, mc.iHeight
+
+		xDist = self.calculateCoordDistance(self.lakeCenter[0], x, iWidth , bWrapX)
+		yDist = self.calculateCoordDistance(self.lakeCenter[1], y, iHeight, bWrapY)
+
+		return (xDist ** 2 + yDist ** 2) ** (0.5)
+
+	def calculateCoordDistance(self, center, target, iMaxRange, bWrap):
+		if bWrap and (abs(target - center) > iMaxRange / 2):
+			return iMaxRange - abs(target - center)
+		else:
+			return abs(target - center)
+
+
+	def updateLake(self, lakeAreaMap, newPlotIndex):
+		"""
+		Returns list thisLake, updates self.lakeCenter
 		Somewhat expensive rebuild of lakeAreaMap, but we want the updated average position of the lake and to take advantage
 		of the automatic merging it ends up doing, now that merging above global maxlakesize is acceptable.
 		"""
 
-		thisLake.append(newPlotIndex)
+		# Target the new plot for lake conversion
 		self.lakeData[newPlotIndex] = 1
 
 		# Redefine all areas on map that match lakeData criteria. Could be cheaper, but eh.
@@ -2356,19 +2398,18 @@ class LakeMap:
 
 		# the ID value of the Area class buried in lakeAreaMap is what we want for merging now, and Area.avgX, Area.avgY for later sorting
 		lakeArea = lakeAreaMap.getAreaByID(lakeAreaMap.areaID[newPlotIndex])
+		self.lakeCenter = (lakeArea.avgX, lakeArea.avgY)
 		# print "	New center after update: (%f, %f), size: %i" % (lakeArea.avgX, lakeArea.avgY, lakeArea.size)
 
 		# Rebuild thisLake by looking at index of tiles that match areaID value for areaID of our new lake tile.
 		# This merges lake tiles that were adjacent to newPlotIndex into thisLake
-		thisLake = [plotIndex for plotIndex, areaID in enumerate(lakeAreaMap.areaID) if areaID == lakeArea.ID]
+		self.thisLake = [plotIndex for plotIndex, areaID in enumerate(lakeAreaMap.areaID) if areaID == lakeArea.ID]
 
 		# print "Lake tiles are:"
 		# print [GetCoordFromIndex(i) for i in thisLake]
 
-		return thisLake
 
-
-	# Ensures the tile type at edges of wrapped world match, so no visible seam is drawn (fault of EXE or something)
+	# Ensures the tile type at edges of wrapped world match, so no visible seam is drawn (fault of graphical engine or something)
 	def avoidWaterGlitch(self, iWidth, iHeight, WATER):
 		plotData = tm.plotData
 		terrData = tm.terrData
@@ -4706,6 +4747,17 @@ def GetCoordFromIndex(i):
 
 	return (x, y)
 
+def LinearMapping(a, b, val, c, d, bTruncate = True):
+	"""
+	Linearly maps a value relative to range [a, b] onto range [c, d], truncating unless bTruncate is passed False
+	E.g. 13 from the range [10, 20] maps to 4.5 in the range [6, 1]; 9 would map to 6 unless bTruncate = False, which returns 7.5
+	"""
+	mappedVal = (val-a)/(b-a) * (d-c) + c
+	if bTruncate:
+		endLow  = min(c, d)
+		endHigh = max(c, d)
+		return max(endLow, min(endHigh, mappedVal))
+	return mappedVal
 
 def FindThresholdFromPercent(map, percent):
 	if not map or percent >= 1:
