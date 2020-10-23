@@ -20,6 +20,9 @@
 			iGridHeight						= The height of the map in 4x4 groups of tiles. If iGridHeight is set to 10, then the map will be 40 tiles high.
 			iTerrainGrainChange				= Used by map scripts.
 			iFeatureGrainChange				= Used by map scripts.
+			iOceanMinAreaSize				= Value used by isCoast() to determine, among other things, whether or not AI consider a body of water this size or higher ocean to defend.
+												Also used by some map scripts to limit size of freshwater lake tiles, but no longer is used to define whether or not a body of water
+												actually provides fresh water or not; that's done by bFreshWaterTerrain tag on water tiles.
 			iResearchPercent				= The percentage of the rate at which technology is researched, implemented through the cost in beakers of researching. So 100 means normal
 												research rates. Higher values yield slower research, so 200 means that researches will require twice as many beakers and will thus be half as fast.
 			iTradeProfitPercent				= A percentage rate change to how much money is made from trade routes. So, a value of 50 means trade routes make 50% more commerce.
@@ -45,7 +48,7 @@
 			<iGridHeight>8</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
-			<iOceanMinAreaSize>6</iOceanMinAreaSize>
+			<iOceanMinAreaSize>8</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>1000</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>106</iDistanceMaintenancePercent>
@@ -74,7 +77,7 @@
 			<iGridHeight>12</iGridHeight>
 			<iTerrainGrainChange>-1</iTerrainGrainChange>
 			<iFeatureGrainChange>-1</iFeatureGrainChange>
-			<iOceanMinAreaSize>8</iOceanMinAreaSize>
+			<iOceanMinAreaSize>10</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>755</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>105</iDistanceMaintenancePercent>
@@ -102,7 +105,7 @@
 			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iGridWidth>21</iGridWidth>
 			<iGridHeight>14</iGridHeight>
-			<iOceanMinAreaSize>10</iOceanMinAreaSize>
+			<iOceanMinAreaSize>12</iOceanMinAreaSize>
 			<iResearchPercent>100</iResearchPercent>
 			<iTradeProfitPercent>545</iTradeProfitPercent>
 			<iDistanceMaintenancePercent>103</iDistanceMaintenancePercent>
