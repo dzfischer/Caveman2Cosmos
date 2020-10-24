@@ -66,17 +66,17 @@ class MapConstants:
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls length, complexity and density of rivers.
-		self.fRiverThreshold = 0.20
+		self.fRiverThreshold = 0.02
 
 		# This value controls the number of deep ocean trenches per ocean map square.
 		self.fTrenchesPercent = 0.006
 
 		# This value controls how many lake tiles will be generated as a percent of land tiles; the actual number of land tiles will NOT
 		# be impacted by any value here, so long as there is ocean on the map. 0.01 approximates Earth's irl ~1% lake-land ratio.
-		self.fLakesPercent = 0.04
+		self.fLakesPercent = 0.06
 
 		# This value adds a multiplier onto the default iMaxLakeSize; makes larger, or smaller, lakes, without impacting how many total lake tiles exist.
-		self.fMaxLakeSizeMod = 1.0
+		self.fMaxLakeSizeMod = 1.5
 
 		# --- The following values should all be between 0 and 1 ---
 		# Base size of added lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
