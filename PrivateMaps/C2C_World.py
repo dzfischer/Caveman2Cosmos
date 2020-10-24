@@ -75,6 +75,9 @@ class MapConstants:
 		# be impacted by any value here, so long as there is ocean on the map. 0.01 approximates Earth's irl ~1% lake-land ratio.
 		self.fLakesPercent = 0.04
 
+		# This value adds a multiplier onto the default iMaxLakeSize; makes larger, or smaller, lakes, without impacting how many total lake tiles exist.
+		self.fMaxLakeSizeMod = 1.0
+
 		# --- The following values should all be between 0 and 1 ---
 		# Base size of added lake is iOceanMinAreaSize as defined in the CIV4WorldInfo.xml minus 1.
 		# A random value between fLakeSizeMinPercent and 1.0 is multiplied to spawned lakesizes when fLakeSizeFactorPercent roll true.
@@ -87,21 +90,23 @@ class MapConstants:
 		self.fWetLakeFactor = 1.25 # Lush, marsh, & muddy.
 		# This value sets the relative minimum altitude of lake depressions.
 		# It is relative to fLandHeight. A value of zero means that lakes can appear as low as the maximum ocean height.
-		self.fRelMinLakeAlt = 0.10
+		self.fRelMinLakeAlt = 0.20
 		# This normalizes the minimum factor a lake can be shrunk to from starting at a high altitude; related to fRelMinLakeAlt. 0 -> full range, 1-> no shrinkage.
-		self.fAltitudeMinFactor = 0.15
+		# Low altitude factors will also increase the liklihood for lakes to touch oceans, forming saltwater harbors and making the coastline 'rougher'
+		self.fAltitudeMinFactor = 0.50
 		# This normalizes the minimum factor a lake can be shrunk to from low rainfall on starting location. 0 -> full range, 1-> no shrinkage.
 		# Effectively increases randomization of lakesizes when a low value is used.
 		self.fRainMinFactor = 0.25
 		# This modifies the shape of how lakes form. 1 creates longer, snake-like lakes while 0 makes all lakes circular as can be.
-		self.fLakeEccentricity = 0.35
+		self.fLakeEccentricity = 0.30
 
 		# Percent of way to max lake size (as defined in the CIV4WorldInfo.xml minus 1) at which point there is a 50/50 chance for a lake
-		# to be either fresh or salt water. See fBlurHarshness for full impact of size on salinity type. Must be >= 0.0. If >1, larger lakes may be freshwater.
+		# to be either fresh or salt water. See fBlurHarshness for full impact of size on salinity type.
+		# Must be >= 0.0. If >1, larger bodies of water than iMaxLakeSize may be freshwater.
 		self.fBlurOnset = 0.80
 		# This adjusts the blurring between large freshwater lakes and saltwater seas (modified logistic growth rate). Must be >= 0.0, when >= 100 immediate cutoff.
 		# 0.0 gives a 50/50 chance any body of water (sans largest) will be freshwater or ocean, regardless of fBlurOnset.
-		# 1.0 gives a ~90% chance of correct size at twice the relative onset; e.g. if onset is 0.8, 90% of lakes size 0.4 are fresh, and 1.6 saltwater
+		# 1.0 gives a ~90% chance of correct type at twice the relative onset; e.g. if onset is 0.8, 90% of lakes at 0.4*iMaxLakeSize are fresh, and 1.6*iMaxLakeSize saltwater
 		# 2.0 makes the blur happen twice faster, e.g. ~90% chance for right type at ~0.6 or 1.2, and so on so forth.
 		# These values are also locally modified by terrain, e.g. salt flats adjacency increases saltwater odds significantly, high rainfall freshwater, etc.
 		self.fBlurHarshness = 1.00
@@ -404,7 +409,7 @@ class MapConstants:
 		self.iHeight	= MAP.getGridHeight()
 		self.iArea		= self.iWidth * self.iHeight
 		self.iWorldSize	= iWorldSize = MAP.getWorldSize()
-		self.iMaxLakeSize = GC.getWorldInfo(iWorldSize).getOceanMinAreaSize() - 1
+		self.iMaxLakeSize = int(round((GC.getWorldInfo(iWorldSize).getOceanMinAreaSize() - 1) * self.fMaxLakeSizeMod))
 		# Too many meteors will simply destroy the Earth, it also prevent an endless loop if the pangea can't be broken.
 		self.iMaxMeteorCount = 15 + 5 * iWorldSize
 		# Minimum size for a meteor strike that attemps to break pangaeas.
@@ -552,7 +557,13 @@ class AreaMap:
 
 
 	def getAreaByPlotIndex(self, plotIndex):
-		return self.areaList[self.areaID[plotIndex]]
+		# print "	plotIndex: %i" % plotIndex
+		# print "	areaID size: %i" % (len(self.areaID))
+		# print "	areaID: %i" % self.areaID[plotIndex]
+		# print "	areaList size: %i" (len(self.areaList)
+		# print self.areaID
+		# print self.areaList
+		return self.areaList[self.areaID[plotIndex] - 1]
 
 
 	def getAreaMapByID(self, targetID):
@@ -2293,10 +2304,7 @@ class LakeMap:
 		bHarbor = False
 		harborList = []
 
-		# Check if start-point is valid (not on a lake, or adjacent to ocean)
-		if self.lakeData[i] == 1:
-			print "	Skipping: Plot (%i, %i) is already a lake!" % (thePlot.x, thePlot.y)
-			return iPlacedTiles
+		# Check if start-point is valid (not on or adjacent to ocean)
 		for dir in xrange(0, 9):
 			xx, yy = GetNeighbor(x, y, dir)
 			ii = GetIndex(xx, yy)
@@ -2306,17 +2314,15 @@ class LakeMap:
 
 		# Grow lake, in 3 main parts. 1) Add currently selected tile, 2) find new potential neighbors, 3) sort and select best neighbor to grow to.
 		while iLakeSize > 0:
-			# Part 1, add current tile "thePlot" to thisLake
+
+			# Part 1, add current tile "thePlot" to thisLake. Has a chance of growing an already existing lake, if not spawning with 4 cardinal adjacent lake tiles.
 			i = thePlot.i
-			if plotData[i] == WATER:
-				print "	ERROR: Doubling on plot (%i, %i)! Placed %i tiles!" % (thePlot.x, thePlot.y, iPlacedTiles)
-				return iPlacedTiles
-			else:
+			if plotData[i] != WATER:
 				iLakeSize -= 1
 				iPlacedTiles += 1
 				plotData[i] = WATER
-				checkedPlotDict[i] = 1
-				self.updateLake(lakeAreaMap, i) # This automatically merges any lakes touching thePlot into thisLake
+			checkedPlotDict[i] = 1
+			self.updateLake(lakeAreaMap, i) # This automatically merges any lakes touching thePlot into thisLake
 
 			# Part 2, look at new neighbors (xx, yy, ii) and filter for list of potential tiles to grow to. Merge/make harbor if necessary.
 			for dir1 in xrange(1, 9):
@@ -2341,18 +2347,22 @@ class LakeMap:
 				# If direct neighbor is land (and we aren't making a harbour) add to list of neighbors to grow next
 				elif dir1 < 6:
 					lakeNeighbors.append(LakePlot(xx, yy, ii, em.data[ii]))
-				# If we're diagonally touching ocean on this plot, have a chance of expanding toward it from any available harbor next, regardless of best neighbor.
-				elif plotData[ii] == WATER and not self.lakeData[ii] and random() < 0.5:
-					harbor1index = GetIndex(thePlot.x, yy)
-					harbor2index = GetIndex(xx, thePlot.y)
-					harbor1plot  = LakePlot(thePlot.x, yy, harbor1index, em.data[harbor1index])
-					harbor2plot  = LakePlot(xx, thePlot.y, harbor2index, em.data[harbor2index])
-					harborList.extend((harbor1plot, harbor2plot))
-					thePlot = choice(harborList)
-					if iLakeSize == 0:
-						print "	Emergency lake growth at (%i, %i) to make harbor!" % (thePlot.x, thePlot.y)
-						iLakeSize += 1
-					bHarbor = True
+				# If we're diagonally touching water on this plot, either expand toward it if it's saltwater, or take it as neighbor if have none.
+				elif plotData[ii] == WATER:
+					if not self.lakeData[ii] and random() < 0.5:
+						harbor1index = GetIndex(thePlot.x, yy)
+						harbor2index = GetIndex(xx, thePlot.y)
+						harbor1plot  = LakePlot(thePlot.x, yy, harbor1index, em.data[harbor1index])
+						harbor2plot  = LakePlot(xx, thePlot.y, harbor2index, em.data[harbor2index])
+						harborList.extend((harbor1plot, harbor2plot))
+						thePlot = choice(harborList)
+						if iLakeSize == 0:
+							print "	Emergency lake growth at (%i, %i) to make harbor!" % (thePlot.x, thePlot.y)
+							iLakeSize += 1
+						bHarbor = True
+					# Case where lake spawns on another lake and can't find adjacent neighbors, try looking a bit further
+					elif self.lakeData[ii] and len(lakeNeighbors) == 0:
+						lakeNeighbors.append(LakePlot(xx, yy, ii, em.data[ii]))
 
 			# Part 3, figure out next best tile to grow if possible, and set that tile as next to expand into for following loop cycle			
 			if bHarbor:
@@ -2378,8 +2388,8 @@ class LakeMap:
 
 		# Redefine all areas on map that match lakeData criteria. Could be cheaper, but eh. Automatically merges applicable lakes.
 		self.lakeData[newPlotIndex] = 1
-		lakeAreaMap.defineAreas(self.isLake)
-
+		lakeAreaMap.defineAreas(self.matchLake)
+		# print "	newPlotIndex: %i" % newPlotIndex
 		# the ID value of the Area class buried in lakeAreaMap is what we want for updating thisLake now, and Area.avgX, Area.avgY for later sorting
 		lakeArea = lakeAreaMap.getAreaByPlotIndex(newPlotIndex)
 		self.lakeCenter = (lakeArea.avgX, lakeArea.avgY)
@@ -2398,7 +2408,7 @@ class LakeMap:
 		Takes a LakePlot object, finds how likely it should be picked next to expand to given the current thisLake
 		"""
 		pass
-		maxRelativeRadius = 4 # Maximum maximum radius a lake can reach compared to expected shape. Greater value -> greater effective fEccentricity value
+		maxRelativeRadius = 4 # Maximum maximum relative radius a lake can reach compared to expected shape. Greater value -> greater effective fEccentricity value
 		fEccentricity = mc.fLakeEccentricity
 		fLandHeight = em.fLandHeight
 		currLakeSize = len(self.thisLake)
@@ -2485,8 +2495,9 @@ class LakeMap:
 		"""
 		TODO: assign lakes to be salt or fresh based on final size, and fBlurOnset/fBlurHarshness
 		"""
+		return
 		waterMap = AreaMap()
-		waterMap.defineAreas(self.isWater)
+		waterMap.defineAreas(self.matchWater)
 		bUpdatedLake = False
 
 		# Loop thru area IDs of lake area; check if size is same as waterMap containing that tile.
@@ -2510,7 +2521,7 @@ class LakeMap:
 				bUpdatedLake = True
 
 		if bUpdatedLake:
-			lakeAreaMap.defineAreas(self.isLake)
+			lakeAreaMap.defineAreas(self.matchLake)
 
 
 		# Match the ID of the erronous lake; collect the index values, and match against the lakeData map
@@ -2527,7 +2538,7 @@ class LakeMap:
 		#################
 
 		# Then, pass the area of each area ID one at a time to salinityBlurring. Depending on outcome, update the plots of lakeArea/lakeData accordingly
-		pass
+
 		# currentLakeID = lakeAreaMap.areaID[i]
 
 	def salinityBlurring(self, waterSize, fModifier):
@@ -2558,11 +2569,11 @@ class LakeMap:
 			return 0
 
 
-	def isLake(self, x, y):
+	def matchLake(self, x, y):
 		return self.lakeData[GetIndex(x, y)] == 1
 
-	def isWater(self, x, y):
-		return plotData[GetIndex(x, y)] == mc.WATER
+	def matchWater(self, x, y):
+		return tm.plotData[GetIndex(x, y)] == mc.WATER
 
 
 	def defineWaterTerrain(self, iWidth, iHeight, iArea, fLandHeight, WATER):
@@ -3113,8 +3124,7 @@ class BonusPlacer:
 		MAP = GC.getMap()
 		MAP.recalculateAreas()
 		iWorldSize = mc.iWorldSize
-		print "	DUDE! iWorldSize is: %f" iWorldSize
-		# TODO: Adjust min bonuses by starting player count, iOrder value (strategics vs not)
+		# TODO: Adjust min bonuses by map size, iOrder value (strategics vs not). worldSize is 1-7 in value, use int(size/3)+1 or smth?
 		fBonusMult = mc.fBonusMult
 		self.aBonusList = bonusList = []
 		# Create and shuffle the bonus list.

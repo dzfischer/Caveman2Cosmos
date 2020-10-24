@@ -367,14 +367,6 @@
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
 					<TerrainType>TERRAIN_SEA</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
