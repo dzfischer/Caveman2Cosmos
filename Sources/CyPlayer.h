@@ -362,7 +362,7 @@ public:
 	int getStateReligionBuildingProductionModifier();
 	void changeStateReligionBuildingProductionModifier(int iChange);
 	int getStateReligionFreeExperience();
-	CyCity* getCapitalCity() const;
+	CyCity* getCapitalCity();
 	int getCitiesLost();
 
 	int getWinsVsBarbs();

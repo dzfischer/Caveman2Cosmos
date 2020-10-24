@@ -318,7 +318,7 @@ class CvCorporationScreen:
 		for i in range(gc.getNumCorporationInfos()):
 			if (gc.getGame().canEverSpread(i)):
 				pHeadquarters = gc.getGame().getHeadquarters(i)
-				if pHeadquarters is None:
+				if pHeadquarters.isNone():
 					szFounded = u"-"
 					screen.setLabelAt("", "CivicList", szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HEADQUARTERS, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				elif not pHeadquarters.isRevealed(gc.getPlayer(self.iActivePlayer).getTeam(), False):

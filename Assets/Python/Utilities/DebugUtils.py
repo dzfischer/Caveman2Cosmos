@@ -301,7 +301,7 @@ def initEditCity(px, py):
 def applyEditCity(iPlayer, userData, popupReturn):
 	iOwner, iID = userData
 	city = GC.getPlayer(iOwner).getCity(iID)
-	if city is None:
+	if city.isNone():
 		return 0
 
 	# Name

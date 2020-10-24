@@ -348,7 +348,7 @@ class DynamicCivNames:
     pTeam = gc.getTeam(pPlayer.getTeam())
     
     cityString = None
-    if capital:
+    if not capital == None and not capital.isNone():
       try :
         # Silly game to force ascii encoding now
         cityString =  pPlayer.getCivilizationDescription(0)

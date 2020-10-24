@@ -138,7 +138,7 @@ class WBCorporationScreen:
 			iRow = screen.appendTableRow("WBHeadquarter")
 			screen.setTableText("WBHeadquarter", 0, iRow, "", GC.getCorporationInfo(i).getButton(), WidgetTypes.WIDGET_PYTHON, 8201, i, 1<<0)
 			pHeadquarter = CyGame().getHeadquarters(i)
-			if pHeadquarter:
+			if not pHeadquarter.isNone():
 				iPlayerX = pHeadquarter.getOwner()
 				pPlayerX = GC.getPlayer(iPlayerX)
 				sColor = u"<color=%d,%d,%d,%d>" %(pPlayerX.getPlayerTextColorR(), pPlayerX.getPlayerTextColorG(), pPlayerX.getPlayerTextColorB(), pPlayerX.getPlayerTextColorA())

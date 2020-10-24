@@ -1,4 +1,3 @@
-#include "CvCity.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvPlayerAI.h"
@@ -1600,11 +1599,9 @@ int CyPlayer::getStateReligionFreeExperience()
 	return m_pPlayer ? m_pPlayer->getStateReligionFreeExperience() : -1;
 }
 
-CyCity* CyPlayer::getCapitalCity() const
+CyCity* CyPlayer::getCapitalCity()
 {
-	FAssert(m_pPlayer);
-	CvCity* city = m_pPlayer->getCapitalCity();
-	return city ? new CyCity(city) : NULL;
+	return m_pPlayer ? new CyCity(m_pPlayer->getCapitalCity()) : NULL;
 }
 
 int CyPlayer::getCitiesLost()
