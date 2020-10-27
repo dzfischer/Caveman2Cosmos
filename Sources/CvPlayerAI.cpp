@@ -1766,11 +1766,9 @@ void CvPlayerAI::AI_makeAssignWorkDirty()
 
 void CvPlayerAI::AI_assignWorkingPlots()
 {
-	// Afforess 6/22/11 - Who cares, plots return no yields anyway?
-	// Also fixes assert in cities, when they shuffle specialists with angry citizens from the anarchy
 	if (isAnarchy())
 	{
-		return;
+		return; // No point
 	}
 	algo::for_each(cities(), CvCity::fn::AI_assignWorkingPlots());
 }
@@ -4743,15 +4741,14 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, i
 }
 
 int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave, bool considerFollowOns) const
-{
+{;
+	PROFILE_FUNC();
+	MEMORY_TRACK();
+
 	int iValue;
 
-	PROFILE_FUNC();
-
-	MEMORY_TRACK()
-
 	TechTypesValueMap::const_iterator techValueItr = m_cachedTechValues.find(eTech);
-	if ( techValueItr == m_cachedTechValues.end() )
+	if (techValueItr == m_cachedTechValues.end())
 	{
 		PROFILE("CvPlayerAI::AI_TechValueCached.CacheMiss");
 
@@ -4776,28 +4773,28 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 		iValue = m_cachedTechValues[eTech];
 	}
 
-	if ( considerFollowOns )
+	if (considerFollowOns)
 	{
 		int iTotalWeight = 100;
 
-		//	What does it (immediately) lead to?
-		for(int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
+		// What does it (immediately) lead to?
+		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
 		{
 			bool bIsORPreReq = false;
 			for (int iK = 0; iK < GC.getNUM_OR_TECH_PREREQS(); iK++)
 			{
-				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK);
+				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs(iK);
 				if (ePrereq != NO_TECH)
 				{
-					//	If we've already got an OR pre-req another makes no difference
-					if ( GET_TEAM(getTeam()).isHasTech(ePrereq) )
-					{
-						bIsORPreReq = false;
-						break;
-					}
-					else if (ePrereq == eTech)
+					if (ePrereq == eTech)
 					{
 						bIsORPreReq = true;
+					}
+					else if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+					{
+						// Already got an OR pre-req, another makes no difference
+						bIsORPreReq = false;
+						break;
 					}
 				}
 			}
@@ -4806,7 +4803,7 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 			int iANDPrereqs = 0;
 			for (int iK = 0; iK < GC.getNUM_AND_TECH_PREREQS(); iK++)
 			{
-				TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
+				const TechTypes ePrereq = (TechTypes)GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs(iK);
 				if (ePrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(ePrereq))
 				{
 					iANDPrereqs++;
@@ -4817,31 +4814,30 @@ int  CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, int* paiBonusC
 				}
 			}
 
-			if ( bIsORPreReq || bIsANDPreReq )
+			if (bIsORPreReq || bIsANDPreReq)
 			{
-				//	Consider all the AND pre-reqs as worth 33% of the follow on,
-				//	and any OR one as 25%
+				// Consider all the AND pre-reqs as worth 33% of the follow on, and significant OR as 25%
 				int	iANDPercentage = (bIsANDPreReq ? 33/iANDPrereqs : 0);
 				int	iORPercentage = (bIsORPreReq ? 25 : 0);
 
 				iTotalWeight += iANDPercentage + iORPercentage;
 
-				iValue += ((iANDPercentage + iORPercentage)*AI_TechValueCached((TechTypes)iJ, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave))/100;
+				iValue += (iANDPercentage + iORPercentage)*AI_TechValueCached((TechTypes)iJ, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave)/100;
 			}
 		}
 
 		//	Normalize to an average to make it comparable with a tech evaluated without follow-ons
-		while(iValue > MAX_INT/100)
+		while (iValue > MAX_INT/100)
 		{
 			iValue /= 2;
 			iTotalWeight /= 2;
 
-			if ( iTotalWeight == 0 )
+			if (iTotalWeight == 0)
 			{
 				iTotalWeight = 1;
 			}
 		}
-		iValue = (iValue*100)/iTotalWeight;
+		iValue = iValue*100/iTotalWeight;
 	}
 
 	return iValue;
@@ -7370,26 +7366,24 @@ bool CvPlayerAI::AI_hasTradedWithTeam(TeamTypes eTeam) const
 // static
 AttitudeTypes CvPlayerAI::AI_getAttitudeFromValue(int iAttitudeVal)
 {
-	if (iAttitudeVal >= 10)
+	// Toffer - perhaps move this function to CvGameCoreUtils?
+	if (iAttitudeVal > 9)
 	{
 		return ATTITUDE_FRIENDLY;
 	}
-	else if (iAttitudeVal >= 3)
+	if (iAttitudeVal > 2)
 	{
 		return ATTITUDE_PLEASED;
 	}
-	else if (iAttitudeVal <= -10)
-	{
-		return ATTITUDE_FURIOUS;
-	}
-	else if (iAttitudeVal <= -3)
-	{
-		return ATTITUDE_ANNOYED;
-	}
-	else
+	if (iAttitudeVal > -3)
 	{
 		return ATTITUDE_CAUTIOUS;
 	}
+	if (iAttitudeVal > -9)
+	{
+		return ATTITUDE_ANNOYED;
+	}
+	return ATTITUDE_FURIOUS;
 }
 
 AttitudeTypes CvPlayerAI::AI_getAttitude(PlayerTypes ePlayer, bool bForced) const
@@ -7415,53 +7409,28 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 {
 	PROFILE_FUNC();
 
-	int iRankDifference;
-	int iAttitude;
-	int iI;
-
 //	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 //AI Autoplay calls this
-	if (bForced)
+	if (isNPC() || GET_PLAYER(ePlayer).isNPC())
 	{
-		if (getTeam() == GET_PLAYER(ePlayer).getTeam() || (GET_TEAM(getTeam()).isVassal(GET_PLAYER(ePlayer).getTeam()) && !GET_TEAM(getTeam()).isCapitulated()))
-		{
-			return 100;
-		}
-
-		if (isNPC() || GET_PLAYER(ePlayer).isNPC())
-		{
-			return -100;
-		}
+		return -100;
+	}
+	if (bForced
+	&& (getTeam() == GET_PLAYER(ePlayer).getTeam() || GET_TEAM(getTeam()).isVassal(GET_PLAYER(ePlayer).getTeam()) && !GET_TEAM(getTeam()).isCapitulated()))
+	{
+		return 100;
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
 	if (m_aiAttitudeCache[ePlayer] != MAX_INT)
 	{
 		return m_aiAttitudeCache[ePlayer];
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
-	iAttitude = GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
+	int iAttitude = GC.getLeaderHeadInfo(getPersonalityType()).getBaseAttitude();
 
 	iAttitude += GC.getHandicapInfo(GET_PLAYER(ePlayer).getHandicapType()).getAttitudeChange();
 
 	iAttitude += GET_PLAYER(ePlayer).getAIAttitudeModifier();
-
-//	if (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI))
-//	{
-//		if (GET_PLAYER(ePlayer).isHuman())
-//		{
-//			iAttitude -= 2;
-//		}
-//	}
 
 	if (!(GET_PLAYER(ePlayer).isHuman()))
 	{
@@ -7471,7 +7440,7 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 
 	iAttitude -= std::max(0, (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getNumMembers() - GET_TEAM(getTeam()).getNumMembers()));
 
-	iRankDifference = (GC.getGame().getPlayerRank(getID()) - GC.getGame().getPlayerRank(ePlayer));
+	const int iRankDifference = (GC.getGame().getPlayerRank(getID()) - GC.getGame().getPlayerRank(ePlayer));
 
 	if (iRankDifference > 0)
 	{
@@ -7508,19 +7477,11 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	iAttitude += AI_getFavoriteCivicAttitude(ePlayer);
 	iAttitude += AI_getTradeAttitude(ePlayer);
 	iAttitude += AI_getRivalTradeAttitude(ePlayer);
-/************************************************************************************************/
-/* Afforess					  Start		 12/14/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	iAttitude += AI_getCivicShareAttitude(ePlayer);
 	iAttitude += AI_getEmbassyAttitude(ePlayer);
 	iAttitude += AI_getCivicAttitudeChange(ePlayer);
-/************************************************************************************************/
-/* Afforess							 END													 */
-/************************************************************************************************/
 
-	for (iI = 0; iI < NUM_MEMORY_TYPES; iI++)
+	for (int iI = 0; iI < NUM_MEMORY_TYPES; iI++)
 	{
 		iAttitude += AI_getMemoryAttitude(ePlayer, ((MemoryTypes)iI));
 	}
@@ -7528,11 +7489,6 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	iAttitude += AI_getColonyAttitude(ePlayer);
 	iAttitude += AI_getAttitudeExtra(ePlayer);
 
-/************************************************************************************************/
-/* REVOLUTION_MOD						 05/18/08								jdog5000	  */
-/*																							  */
-/* Revolution AI																				*/
-/************************************************************************************************/
 	if( GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isRebelAgainst(getTeam()) )
 	{
 		iAttitude -= 5;
@@ -7541,15 +7497,7 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	{
 		iAttitude -= 3;
 	}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess					  Start		 06/01/10											   */
-/*																							  */
-/* Ruthless AI: The Enemy of Our Enemy is our Friend!										   */
-/************************************************************************************************/
 	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
 	{
 		if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getWorstEnemy() == GET_TEAM(getTeam()).AI_getWorstEnemy())
@@ -7557,21 +7505,9 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 			iAttitude += 2;
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
-	// Attitude cache
 	m_aiAttitudeCache[ePlayer] = range(iAttitude, -100, 100);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+
 	return range(iAttitude, -100, 100);
 }
 

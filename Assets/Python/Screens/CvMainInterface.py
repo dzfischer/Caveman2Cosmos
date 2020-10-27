@@ -4566,7 +4566,9 @@ class CvMainInterface:
 										for CyCity in CyPlayer.cities():
 											if not CyCity.isNone() and CyCity.isRevealed(iTeamAct, False):
 												iCount += 1
-										if iCount and not CyPlayer.getCapitalCity().isRevealed(iTeamAct, False):
+										# (capital==None and iCount > 0) wouldn't think it possible, but it happened...
+										capital = CyPlayer.getCapitalCity()
+										if iCount and capital and not capital.isRevealed(iTeamAct, False):
 											iCount += 1
 										szTxt = u"<color=0,255,255>%d" %iCount
 									scores.setNumCities(szTxt)
