@@ -7026,6 +7026,22 @@ bool CvUnit::canScrap() const
 }
 
 
+int CvUnit::calculateScrapValue() const
+{
+	float fCost = getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent() / 100.0f;
+	fCost += fCost * getUpgradeDiscount() / 100.0f;
+
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		int iGroupDiff = groupRank() - m_pUnitInfo->getBaseGroupRank();
+		// pow(int, int) returns int, not double...
+		fCost *= std::pow(3.0f, iGroupDiff);
+	}
+
+	fCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
+	return std::max(1, int(fCost));
+}
+
 void CvUnit::scrap()
 {
 	if (!canScrap())
@@ -7042,15 +7058,7 @@ void CvUnit::scrap()
 
 	if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE) && plot()->getOwner() == getOwner())
 	{
-		int iCost = (getUnitInfo().getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()) / 100;
-		iCost /= GC.getUNIT_GOLD_DISBAND_DIVISOR();
-		iCost += (iCost * getUpgradeDiscount())/100;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCost = applySMRank(iCost, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
-		}
-		iCost = std::max(1, iCost);
-		GET_PLAYER(getOwner()).changeGold(iCost);
+		GET_PLAYER(getOwner()).changeGold(calculateScrapValue());
 	}
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
@@ -11293,40 +11301,17 @@ int CvUnit::getHurryProduction(const CvPlot* pPlot) const
 
 bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (isDelayedDeath())
-	{
-		return false;
-	}
-
-	if (getHurryProduction(pPlot) == 0)
+	if (isDelayedDeath() || getHurryProduction(pPlot) == 0)
 	{
 		return false;
 	}
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL)
+	if (pCity == NULL || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
-
-	//if (pCity->getProductionTurnsLeft() == 1)
-	//{
-	//	return false;
-	//}
-
-/************************************************************************************************/
-/* Afforess	                  Start		 04/23/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (getTeam() != pCity->getTeam())
-	{
-		return false;
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (!bTestVisible)
 	{
@@ -11342,14 +11327,12 @@ bool CvUnit::canHurry(const CvPlot* pPlot, bool bTestVisible) const
 
 bool CvUnit::hurry()
 {
-	CvCity* pCity;
-
 	if (!canHurry(plot()))
 	{
 		return false;
 	}
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
 	if (pCity != NULL)
 	{
