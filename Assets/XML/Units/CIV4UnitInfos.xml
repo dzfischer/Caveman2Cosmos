@@ -65506,10 +65506,10 @@ Base XP gained when defending
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>37</iCost>
+			<iCost>40</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iBaseFoodChange>33</iBaseFoodChange>
+			<iBaseFoodChange>30</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65595,7 +65595,7 @@ Base XP gained when defending
 			<iCost>90</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>69</iBaseFoodChange>
+			<iBaseFoodChange>72</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65676,7 +65676,7 @@ Base XP gained when defending
 			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>144</iBaseFoodChange>
+			<iBaseFoodChange>204</iBaseFoodChange>
 			<iCombat>3</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65756,7 +65756,7 @@ Base XP gained when defending
 			<iCost>660</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>396</iBaseFoodChange>
+			<iBaseFoodChange>594</iBaseFoodChange>
 			<iCombat>5</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -65851,6 +65851,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>30</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRADE_CARAVAN</Type>
@@ -65938,6 +65958,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>72</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUPPLY_TRAIN</Type>
@@ -66022,6 +66062,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>204</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_FREIGHT</Type>
@@ -66104,6 +66164,26 @@ Base XP gained when defending
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<Actions>
+				<Action>
+					<MissionType>MISSION_HURRY_PRODUCTION_CARAVAN</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_HURRY_PRODUCTION_CARAVAN</OutcomeType>
+							<iChance>100</iChance>
+							<Yields>
+								<iYield>0</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
+										<Constant>594</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+			</Actions>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_CHASER</Type>
